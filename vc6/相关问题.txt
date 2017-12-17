@@ -1,0 +1,73 @@
+1、如何修改顶部的 Logo?
+   在压缩包的iShowMusic V1.2文件夹里提供了顶部Logo的PSD源文件，请在那里修改。修改后保存为logo.jpg，
+覆盖 template\default\images 里的logo.jpg图片即可。
+   
+注意：请用Adobe Photoshop CS2或者以上版本打开。
+
+
+2、如何进入后台管理？
+   进入http://您的域名/iShowMusic安装目录/admin.php，用管理员帐号登陆即可进入后台。或者用管理员帐号
+登陆前台，在页底部会出现“后台管理”的链接。
+
+
+
+3、首页的“最新上架”的调用数目如何修改(默认的是10条）？
+   进入 template\default ，用网页编辑器（如：Editplut、Dreamweaver，不可用记事本）打开index.html，
+查找“new_song(1,10)”，不包括双引号，里面的10就是调用的数目，你可以将其修改成你想要调用的数目。同
+理，后面的 new_song(2,10) new_song(3,10) …… new_song(6,10)的10也要修改。
+
+
+
+4、为什么我从本地上传音乐无法成功？
+   一般的的PHP主机的默认在线上传文件最大值为2M，如果你上传的文件大小大于2M，文件将无法上传，对于
+这种情况，你可以修改PHP环境的配置参数（修改服务器php.ini里$UPLOAD_MAX_FILESIZE=2M  为合适大小），也可
+以只上传小于2M的音乐文件，像wma格式的音乐文件。
+
+
+
+5、为什么我将上传文件夹修改后有的音乐不能在线试听？
+   因为本系统的音乐文件址址是按网络URL方式存储的，所以一旦音乐文件地址改变了，音乐将无法试听，所以
+为了避免这种情况的发生，上传文件夹的名称请在开始时就设置好，以后最好不要修改，否则将无法试听音乐，
+解决的办法就是将上传文件夹的名称改回，或者你要是不怕麻烦的话，可以进入数据所在目录，将音乐数据一个
+一个的修改地址。
+
+
+
+6、如何防止音乐文件被盗链？
+   本系统已自带防盗链功能，在后台是的“系统参数设置”里可以设置是否启用防盗链，为了使防盗链功能更有
+效，建议不要打开“开放下载”功能。因为一旦开放了下载，防盗链功能就只能对付一般的菜鸟了，高手还是可以
+通过技术手段发现文件的真实地址的。
+
+
+
+7、如何使普通的会员就可以上传LRC歌词?
+解决方法有两个：
+  一是在后台的“系统参数设置”里，将“新会员初始等级”设置为“认证会员”，这也是最简单的方法；
+  二是打开 addlrc.php 文件，找到第15行的“ GetCookie('userlever')<"1" ” ，将 1 改成 0 ；再打开play.php
+文件，找到第121行的“ GetCookie('userlever')>="1" ”，将 1 改成 0 。
+
+
+
+8、如何修改首页的Flash广告？
+   进入 template\default ，用网页编辑器（如：Editplut,Dreamweaver，不可用记事本）打开index.html，找到
+下面这段代码：
+
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="460" height="170">
+          <param name="movie" value="$skinpath/$skin/images/FlashBanner.swf" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="transparent" />
+          <param name="FlashVars" value="bcastr_file=$skinpath/$skin/images/banner/1.jpg|$skinpath/$skin/images/banner/2.jpg|$skinpath/$skin/images/banner/3.jpg&bcastr_link=http://www.ishowsky.cn/|http://www.ishowsky.cn/music/|http://www.ishowsky.cn/blog/&bcastr_title=iShowMusic音乐系统 V1.2 发布|iShowMusic官方演示|iShowMusic官方BLOG&TitleTextColor=0xFFFFFF&TitleBgColor=0xCCCCCC&BtnDefaultColor=0xCCCCCC&BtnOverColor=0x000000"/>
+          <embed width="460" height="170" loop="false" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" salign="T" menu="false" wmode="transparent"></embed>
+          </object>   
+
+将 <param name="FlashVars" value="...."> 里的“ bcastr_file=$skinpath/$skin/images/banner/1.jpg|$skinpath/$skin/images/banner/2.jpg|$skinpath/$skin/images/banner/3.jpg ”修改成你的图片地址(不要修改 $skinpath/$skin/ )；相应的图片请保存在 template\default\images\banner 下，图片尺寸大小为 460×170。
+将里面的“ bcastr_link=http://www.ishowsky.cn/|http://www.ishowsky.cn/music/|http://www.ishowsky.cn/blog/  ”修改成图片相对应的链接，
+将里面的“ bcastr_title=iShowMusic音乐系统 V1.2 发布|iShowMusic官方演示|iShowMusic官方BLOG  ”修改成图片相对应的要显示的标题。
+
+
+由于时间仓促，暂时只能想到这么多，以后再慢慢添加，你若还有什么问题请到我们的官方网站 http://www.ishowsky.cn 寻求帮助。
+
+
+                                                             www.iShowSky.cn
+
+
