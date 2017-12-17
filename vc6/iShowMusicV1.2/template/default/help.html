@@ -1,0 +1,89 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu1>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	 <div id="Subtitle">$subtitle</div>
+	 <div id="Help">
+	  <h2 id=#a>1.为什么要注册？</h2>
+	  <p>注册登陆用户可以享受到更多更全面的服务。
+	    具体权限请查看下图。<br />
+	    <img src="$skinpath/$skin/images/help1.gif" width="256" height="157" /></p>
+	  <h2>2.如何注册？</h2>
+	  <p>（1）．进入 <strong>$site_name</strong>首页<a href="$site_url">$site_url</a> , 点击“还不是会员-&gt;免费注册“。或者直接打开注册页面<a href="$site_url/register.php" target="_blank">$site_url/register.php</a>注册。<br />
+	  （2）．按要求填写用户名、密码、确认密码和邮箱地址。点击确定就完成注册。</p>
+	 <h2>3.忘记了密码怎么办？</h2>
+	 <p>请使用注册邮箱发送邮件至：$admin_email   ，我们会将密码发送至您的邮箱。</p>
+	 <h2>4.为什么我不能登录？</h2>
+	 <p>（1）请注意登陆的用户名和密码是否正确。<br>
+	 （2）或者在地址栏输入登录页面地址后再次登录：<a href="$site_url/login.php">$site_url /login.php</a>  </p>
+	 <h2 id=#b>5.什么是会员音乐盒？</h2>
+	 <p>在<strong>$site_name</strong>中，你可以将你喜欢的音乐收藏到“我的音乐盒”里，这样登陆后可随时享受音乐盒中的好音乐，不再受保存时间和计算机的限制。同时音乐盒中的歌曲可以进行连播，更方便您的视听及和朋友的分享。</p>
+	 <h2>6.如何将音乐收藏到“我的音乐盒”？</h2>
+	 <p>在音乐列表页面或者音乐播放页面，点击“收藏到我的音乐盒”就可完成音乐收藏。（注意：请先登陆！）</p>
+	 <h2 id=#c>7.关于点歌</h2>
+	 <p>在本站，你可以通过点歌为你的好友送上您的祝福。只要在音乐列表页面或者音乐播放页面点击“点歌”，然后填写表中相应的选项，即可完成点歌。之后在 <a href="$site_url/song.php"><strong>点歌台</strong></a> 页面就可看见您的点歌信息。</p>
+	 <h2 id=#d>8.为什么音乐不能播放？</h2>
+	 <p>1．不能下载或不能在线听的原因有：网站音乐地址已过期或者音乐文件数据已删除。
+	   <br />
+	   2．检查是否使用Windows Media Player 9.0 或以上版本的播放器。<br />
+	 3．如果在线无法播放，这是由于播放器组件被破坏引起的。可以选择以下操作：
+	 <br />
+	 方法① 重新升级播放器，或安装更高一级的版本。
+	 <br />
+	 方法② 删除C:\Documents and Settings\All Users\DRM后重新升级播放器（注：此文件为隐藏文件）。</p>
+	 <h2 id=#e>9.关于音乐下载</h2>
+	 <p>只有注册会员才可以下载本站的音乐，所以要想下载音乐，请先注册为本站会员。（管理员关闭了“对外下载”功能除外）</p>
+	 <h2 id=#f>10.什么是会员推荐音乐？</h2>
+	 <p>“会员推荐音乐”是为了文便大家将自己喜欢的音乐推荐到本站，与其它人一起分享您所推荐的音乐。</p>
+	 <h2>11.如何向本站推荐音乐？</h2>
+	 <p>登陆后，进入 <a href="$site_url/member.php"><strong>会员中心</strong> </a>,点击 “向本站推荐音乐”，填写好新页面里的每个选项，点击确定就完成操作。</p>
+	 <h2 id=#g>12.关于上传LRC歌词？</h2>
+	 <p>上传LRC歌词功能是为了在系统没有歌曲相对应的歌词时，方便大家上传歌词（注意，系统只支持 <strong>LRC</strong> 格式的歌词文件）。且考虑到内容的关系，只在通过管理员认证的会员才可以上传歌词。普通会员无法上传。关于如何成为认证会员，请<a href="mailto:$admin_email">联系网站管理员</a>。</p>
+	 <h2 id=#h>13.关于音乐版权！</h2>
+	 <p>本站的所有音乐均是通过网络收集，只作方便大家试听之用，音乐的版权归原唱片公司所有，若本站侵犯了您的权益，请<a href="mailto:$admin_email">联系我们</a>，我们会及时的删除相关音乐，同时请各位网友支持你所喜爱歌手，购买正版唱片，谢谢！</p>
+	 </div>
+    </div>
+	
+    <!--Sidebar Begin -->
+	<div id="Sidebar">
+	  <div id="SingerNav"><h2>帮助导航</h2>
+	  <ul>
+	   <li><a href="#a">关于注册和登录</a></li>
+	   <li><a href="#b">关于音乐盒</a></li>
+	   <li><a href="#c">关于点歌</a></li>
+	   <li><a href="#d">关于音乐播放</a></li>
+	   <li><a href="#e">关于音乐下载</a></li>
+	   <li><a href="#f">关于会员推荐音乐</a></li>
+	   <li><a href="#g">关于上传LRC歌词</a></li>
+	   <li><a href="#h">关于音乐版权</a></li>
+	  </ul>
+	 </div>
+	
+	 <!--右边预留位置开始 -->
+	 <div id="RightBanner"></div>
+	 <!--预留位置结束 -->
+    </div>
+	<!--Sidebar End -->
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

@@ -1,0 +1,73 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu1>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	 <div id="Subtitle">$subtitle</div>
+	 <div id="Dg">
+	 <form method="post" action="login.php">
+	 <li><span class="left">用 户 名：</span>
+	   <input name="username" type="text" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30">
+	 </li>
+	 <li><span class="left">密  码：</span>
+	   <input name="userpass" type="password" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30"></li>
+<!--
+EOT;
+if($cknumon){
+print <<<EOT
+-->
+	<li><span class="left">验 证 码：</span>
+	   <input name="gdcode" type="text" size="4" maxLength="4" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"/> <img src="ck.php?" align="absmiddle" onclick="this.src='ck.php?'" />  <span class="zs">如果看不清验证码，请点图片刷新</span></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	 <li><span class="left">Cookie有效期：</span>
+	   <input type="radio" name="cktime" value="31536000" checked /> 一年
+	   <input type="radio" name="cktime" value="2592000" /> 一个月
+	   <input type="radio" name="cktime" value="86400" /> 一天
+	   <input type="radio" name="cktime" value="3600" /> 一小时
+	   <input type="radio" name="cktime" value="0" /> 即时
+	 </li>
+	 <li><span class="left"></span><span class="zs">提示：您的浏览器必须支持cookie，否则将不能登录。</span></li>
+	 <li><span class="left"></span>
+	   <input type="submit" value="确认登录" class="SubmitButton"> 
+	   <input type="hidden" name="action"  value="login"> 
+	   <input type="hidden" name="jumpurl"  value="$jumpurl">
+	   <input type="hidden" name="forward"  value="$forward">
+       <input type="reset"  value="重新填写" class="SubmitButton"></li>
+	 </form>
+	 </div>
+    </div>
+    <!--Sidebar Begin -->
+	<div id="Sidebar">
+	
+	 <!--右边预留位置开始 -->
+	 <div id="RightBanner"></div>
+	 <!--预留位置结束 -->
+	 <div id="NowReg"><a href="register.php"><img src="$skinpath/$skin/images/reg.gif" alt="现在注册！" border="0" /></a></div>
+	 <!--Sidebar End -->
+	 
+    </div>
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

@@ -1,0 +1,81 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu7>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+<!--Head End! -->
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	 <div id="Subtitle">$subtitle</div>
+	 <div id="List">
+	 <form action="player/play.php" method="post" name="musicbox" onsubmit="FormWin(this,'musicbox')">
+	 <li><span class="songname"> 歌名</span><span class="singer">演唱</span><span class="scrq">收藏日期</span><span class="play">试听</span><span class="down">下载</span><span class="sc">删除</span></li>
+	 <!--
+EOT;
+get_box();
+print <<<EOT
+-->
+	  <li><div align="center">
+			  <input type='button' value='全选' onclick='sal(musicbox)' class="sbt">
+&nbsp;&nbsp;<input type='button' value='反选' onclick='opal(musicbox)' class="sbt">
+&nbsp;&nbsp;<input type='button' value='清空' onclick='clal(musicbox)' class="sbt">
+&nbsp;&nbsp;<input type="submit" name="Submit" value='播放' class="sbt"></div>
+      </li>
+	  </form>
+	 </div>
+    </div>
+    <!--Sidebar Begin -->
+	<div id="Sidebar">
+
+	  <div id="Search">
+	   <h2>音乐搜索</h2>
+	   <form name="form" method="post" action="search.php" target="_blank">
+	   <div class="SearchMain"><input name="keyword" size="28" border="0" style="border:1px solid #CCC; background:#FFF" onfocus="if(this.value=='输入关键词'){this.value=''}" type="text" value="输入关键词"/>
+	   <input name="action" type="hidden" value="search" /><input type="submit" value="搜 索" class="sbt"/>
+	   <br />
+	   <input name="type" type="radio" value="name" checked="checked" />
+	   按音乐名称查找
+	   <input name="type" type="radio" value="singer" />按歌手查找</div>
+	   </form>
+	 </div>
+	 
+	 <div id="Commend">
+	   <h2>试听排行</h2>
+	 </div>
+	  <div id="CommendList">
+	  	<ul> 
+<!--
+EOT;
+top($top,10);
+print <<<EOT
+-->
+	   </ul>
+	 </div>
+	 <div id="Bottom"></div>
+	 <!--右边预留位置开始 -->
+	 <div id="RightBanner"></div>
+	 <!--预留位置结束 -->
+	 
+	 <!--Sidebar End -->
+	 
+    </div>
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

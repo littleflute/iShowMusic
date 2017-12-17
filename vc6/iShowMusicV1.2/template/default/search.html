@@ -1,0 +1,76 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu1>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	 <div id="Subtitle">$subtitle</div>
+<!--
+EOT;
+if(empty($action)){
+print <<<EOT
+-->
+<div id="Dg">
+	 <form method="post" action="search.php">
+	 <li><span class="left">关 键 词：</span><input name="keyword" type="text"  style="border-style: solid; border-width: 1;border-color:#ccc" size="30"><span class="zs"> 注意：输入的关键词越简单越容易查找</span></li>
+	 <li><span class="left">按何种方式：</span>
+	                    <select name="type" size="1" id="type">
+                          <option value="name">歌曲名称</option>
+                          <option value="singer">歌手姓名</option>
+                        </select></li>
+	 <li><span class="left"></span>
+	   <input type="submit" value="全站搜索" class="SubmitButton"> 
+		<input name="action" type="hidden" value="search"> 
+        </li>
+		</form>
+	 </div>
+<!--
+EOT;
+}
+elseif($action=='search'){
+print <<<EOT
+-->
+	 <div id="List">
+	 <li><span class="songname"> 歌名</span><span class="singer">演唱</span><span class="play">试听</span><span class="dg">点歌</span><span class="sc">收藏</span><span class="down">下载</span></li>
+<!--
+EOT;
+get_search($keyword);
+print <<<EOT
+-->
+	 </div>
+<!--
+EOT;
+}
+print <<<EOT
+-->	 
+    </div>
+    <!--Sidebar Begin -->
+	<div id="Sidebar">
+	
+	 <!--右边预留位置开始 -->
+	 <div id="RightBanner"></div>
+	 <!--预留位置结束 -->
+    </div>
+	<!--Sidebar End -->
+  
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

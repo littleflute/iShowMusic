@@ -1,0 +1,316 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu1>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+<!--Head End! -->
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	<div id="IndexTop">
+	<div id="SingerNav"><h2>音乐导航</h2>
+	<ul>
+<!--
+EOT;
+MusicNav();
+print <<<EOT
+-->
+	</ul>
+	</div>
+	
+	<div id="Diange"><a href="song.php">点 歌 台：</a>$dianglist</div>
+	  
+	  <!--Flash Banner Begin -->
+	  <div id="FlashBanner">
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="460" height="170">
+          <param name="movie" value="$skinpath/$skin/images/FlashBanner.swf" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="transparent" />
+          <param name="FlashVars" value="bcastr_file=images/banner/1.jpg|images/banner/2.jpg|images/banner/3.jpg&bcastr_link=http://www.ishowsky.cn/|http://music.ishowsky.cn/|http://bbs.ishowsky.cn/&bcastr_title=iShowMusic音乐系统 V1.2 发布|iShowMusic官方演示|iShowMusic官方论坛&TitleTextColor=0xFFFFFF&TitleBgColor=0xCCCCCC&BtnDefaultColor=0xCCCCCC&BtnOverColor=0x000000"/>
+          <embed width="460" height="170" loop="false" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" salign="T" menu="false" wmode="transparent"></embed>
+          </object>      
+	  </div>
+	  <!--Falsh Banner End -->
+	</div>
+
+<!-- 搜索框 -->
+<form name="SearchForm" method="post" action="search.php" target="_blank">
+ <div id="SearchBox">
+   <div id="SearchMain">
+   <div class="SearchInput">
+   <img src="$skinpath/$skin/images/s_icon.png">
+   <input type="text" class="input" name="keyword" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this);if(this.value=='请输入关键字'){this.value=''}" onmouseout="fEvent('mouseout',this)" value="请输入关键字"/> <input type="submit" value="" class="btn" onmouseover="this.className='here'" onmouseout="this.className='btn'"  onClick="SearchCheck(SearchForm);"/>
+   <input name="action" type="hidden" value="search" /></div>
+   <div class="SearchType"><input name="type" type="radio" value="name" checked="checked" />
+	   按 音乐名称 查找 &nbsp;&nbsp;&nbsp;&nbsp;
+	   <input name="type" type="radio" value="singer" />按 歌手 查找</div>
+	   <!--<span class="hotwords">热门搜索：</span> -->
+   </div>
+</div>
+</form>
+<!-- 搜索框 -->
+
+	
+	<div id="IndexBottom">
+
+	  <!--New Music Begin -->
+	  <div id="MusicUpdata"><span class="randplay"><a href="javascript:randPlay(20)"><font style="color:red">>> 随机试听20首音乐</font></a></span><a href="new.php" target="_blank" class="update">最新上架</a></div>	  
+	   <div class="NewMusic">
+	     <div class="NewContent">
+		   <h2>
+<!--
+EOT;
+GetSortName(1);
+print <<<EOT
+-->
+</h2>
+		   <ul>
+<!--
+EOT;
+new_song(1,10);
+print <<<EOT
+-->
+		   </ul>
+		 </div>
+	     <div class="NewContent">
+		   <h2>
+<!--
+EOT;
+GetSortName(2);
+print <<<EOT
+-->
+</h2>
+		   <ul>
+<!--
+EOT;
+new_song(2,10);
+print <<<EOT
+-->
+		   </ul>
+		 </div>
+	     <div class="NewContent">
+		   <h2>
+<!--
+EOT;
+GetSortName(3);
+print <<<EOT
+-->
+</h2>
+		   <ul>
+<!--
+EOT;
+new_song(3,10);
+print <<<EOT
+-->
+		   </ul>
+		 </div>
+	     <div class="NewContent">
+		   <h2>
+<!--
+EOT;
+GetSortName(4);
+print <<<EOT
+-->
+</h2>
+		   <ul>
+<!--
+EOT;
+new_song(4,10);
+print <<<EOT
+-->
+		   </ul>
+		 </div>
+	     <div class="NewContent">
+		   <h2>
+<!--
+EOT;
+GetSortName(5);
+print <<<EOT
+-->
+</h2>
+		   <ul>
+<!--
+EOT;
+new_song(5,10);
+print <<<EOT
+-->
+		   </ul>
+		 </div>	
+	     <div class="NewContent">
+		   <h2>
+<!--
+EOT;
+GetSortName(6);
+print <<<EOT
+-->
+</h2>
+		   <ul>
+<!--
+EOT;
+new_song(6,10);
+print <<<EOT
+-->
+		   </ul>
+		 </div>	 		 
+	   </div>
+	  
+
+      <!--New Music End -->
+	  
+	</div>
+	</div>
+	
+	<!--Sidebar Begin -->
+	<div id="Sidebar">
+	 
+     <!-- Notice -->
+	 <div id="Notice">
+	   <h2>站点公告</h2>
+	   <marquee width="90%" height="90%" direction="up" scrollamount="1" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()">
+<!--
+EOT;
+GetNotice();
+print <<<EOT
+-->
+	   </marquee>
+	 </div>
+	 <!-- Notice -->
+	 	 
+ 
+	 <div id="Top"><h2>会员中心</h2></div>
+	 <div id="logincontent">
+<!--
+EOT;
+if (GetCookie('userlogin')!=="1"){
+print <<<EOT
+-->		  
+      <form method="post" action="login.php">
+	   <div id="Login">
+	     <ul>
+	      <li>用户名：<input name="username" type="text" class="login_input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"></li>
+	      <li>密&nbsp;&nbsp;&nbsp;码：<input name="userpass" type="password" class="login_input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"></li>
+<!--
+EOT;
+if($cknumon){
+print <<<EOT
+-->
+	      <li>验证码：<input name="gdcode" type="text" size="4" maxLength="4" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"/> <img src="ck.php?" align="absmiddle" onclick="this.src='ck.php?'" /></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	     <li style="text-align:center"><INPUT class=indexlogin type=submit value="登 录"> <input name="action" type="hidden" value="login"><INPUT class=indexreg onclick='window.location.href="register.php"' type=button value="注 册"> </li>
+		 </ul>
+	   </div>
+	   
+	   </form>
+<!--
+EOT;
+}else{
+$username=GetCookie('username');
+print <<<EOT
+-->
+      <div id="Login">
+	    <ul>
+	     <li> >> <span class=green>$username</span>，你好!</li>
+		 <li> >> <a href="musicbox.php">我的音乐盒</a></li>
+		 <li> >> <a href="usercom.php">向本站推荐音乐</a></li>
+<!--
+EOT;
+if ($isdiscuz && $discuz && $passport_key){
+print <<<EOT
+-->	
+		 <li> >> <a href="$discuz/pm.php">短 消 息</a></li>
+		 <li> >> <a href="$discuz/space.php?username=$username">个人空间</a></li>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+		 <li> >> <a href="editpsd.php">修改密码</a></li>
+		 <li> >> <a href="login.php?action=out">注 销</a></li>
+	   </ul>
+	  </div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+	 </div>
+	 <div id="Bottom"></div>
+
+
+	 <!-- 试听排行 -->
+	 <div id="PlayTop">
+	   <h2>试听排行</h2>
+	   <ul>
+<!--
+EOT;
+top($top,10,0);
+print <<<EOT
+-->
+	   </ul>
+	 </div>
+	 <!-- 试听排行 -->
+
+	 <!--右侧 Banner 广告 -->
+	 <div id="RightBanner"><script language="JavaScript" src="Ad/1207642860.js"></script></div>
+	 <!--右侧 Banner 广告 -->
+
+	 <div id="Commend">
+	   <h2>音乐推荐</h2>
+	 </div>
+	  <div id="CommendList">
+	  	<ul> 
+<!--
+EOT;
+commend($commend,10);
+print <<<EOT
+-->
+	   </ul>
+	 </div>
+	 <div id="Bottom"></div>
+	 <!--Sidebar End -->
+	 
+    </div>
+  </div>
+</div>
+
+<!--
+EOT;
+if ($indexlinkon=="1"){
+print <<<EOT
+-->	
+<div id="ShareLinks">
+  <h2>友情链接</h2>
+  <div class="linkcon">
+<!--
+EOT;
+Sharelinks();
+print <<<EOT
+-->
+  </div>
+</div>
+<!--
+EOT;
+}
+print <<<EOT
+-->	
+
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

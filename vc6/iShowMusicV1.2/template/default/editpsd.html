@@ -1,0 +1,63 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu1>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	 <div id="Subtitle">$subtitle</div>
+	 <div id="Dg">
+	 <form method="post" action="editpsd.php">
+	 <li><span class="left">原 密 码：</span>
+	   <input name="oldpsd" type="password" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30"></li>
+	 <li><span class="left">新 密 码：</span>
+	   <input name="newpsd" type="password" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30"></li>
+	 <li><span class="left">重复新密码：</span>
+	   <input name="repnewpsd" type="password" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30"></li>
+<!--
+EOT;
+if($cknumon){
+print <<<EOT
+-->
+	<li><span class="left">验 证 码：</span>
+	   <input name="gdcode" type="text" size="4" maxLength="4" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"/> <img src="ck.php?" align="absmiddle" onclick="this.src='ck.php?'" /> <span class="zs">如果看不清验证码，请点图片刷新</span></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	 <li><span class="left"></span>
+	   <input type="submit" value="确认修改" class="SubmitButton"> 
+		<input name="action" type="hidden" value="save"> 
+        <input type="reset"  value="重新填写" class="SubmitButton"></li>
+	 </form>
+	 </div>
+    </div>
+    <!--Sidebar Begin -->
+	<div id="Sidebar">
+	
+	 <!--右边预留位置开始 -->
+	 <div id="RightBanner"></div>
+	 <!--预留位置结束 -->
+	 
+	 <!--Sidebar End -->
+    </div>
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

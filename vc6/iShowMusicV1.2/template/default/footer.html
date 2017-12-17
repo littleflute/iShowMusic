@@ -1,0 +1,33 @@
+<!--
+<?php print <<<EOT
+-->
+<!--Footer Begin  -->
+<div id="Footer">
+   <div class="CopyRight">
+    Powered by <a href="http://www.ishowsky.cn" target="_blank"><font style="color:#C1A41A" title="Powered by iShow Music V{$iShow_Ver}">  iShow Music V{$iShow_Ver}</font></a> Copyright &copy; 2008 <a href="$site_url" target="_blank"><font style="color:#F90;">$site_name</font></a> All rights reserved. 
+	<br />
+	版权声明：本站为非盈利站点，所有音乐链接来自网络，音乐版权归原唱片公司所有！
+	</div>
+  <div class="FootMenu"><a href="$site_url">音乐首页</a> | <a href="member.php">会员中心</a> | <a href="search.php">搜 索</a> | <a href="mailto:$admin_email">联系我们</a> | <a href="help.php">系统帮助</a> 
+<!--
+EOT;
+if (GetCookie('username')=="$manager"){
+print <<<EOT
+-->	
+ | <a href="admin.php">后台管理</a>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+</div>
+</div>
+<!--Footer end -->
+<script language="javascript">
+remove_loading();
+</script>
+</body>
+</html>
+<!--
+EOT;
+?>-->

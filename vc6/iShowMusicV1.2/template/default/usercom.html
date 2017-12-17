@@ -1,0 +1,74 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu1>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	 <div id="Subtitle">$subtitle</div>
+	 <div id="Dg">
+	 <script language="JavaScript1.2">
+     function validate(theform) {
+	   if (theform.comsongname.value=="" ) {
+		alert("请填写音乐名称");
+		return false; }
+		if (theform.comsinger.value=="" ) {
+		alert("请填写演唱者.");
+		return false; }
+		if (theform.comurl.value=="" ) {
+		alert("请填写音乐的网络URL地址.");
+		return false; }	
+}
+//-->
+</script>
+	 <form method="post" action="usercom.php">
+	 <li><span class="left">音乐名称：</span>
+	   <input name="comsongname" type="text" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30" maxlength="50"></li>
+	 <li><span class="left">演唱者：</span>
+	   <input name="comsinger" type="text" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30"></li>
+	 <li><span class="left">所属类别：</span>
+	   <select name="comsort" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)">
+<!--
+EOT;
+showcategory();
+print <<<EOT
+--></select></li>
+	 <li><span class="left">音乐URL地址：</span>
+	    <input name="comurl" type="text" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="70"></li>
+	 <li><span class="left"></span>
+	   <input type="submit" name="Submit" onclick="return validate(this.form)" value="提交推荐" class="SubmitButton">
+       <input name="action" type="hidden" value="save" />
+	   <input name="username" type="hidden" value="$username" />　　 
+       <input type="reset" name="Submit2" value="重新填写" class="SubmitButton"></li>
+	 </form>
+	 </div>
+    </div>
+    <!--Sidebar Begin -->
+	<div id="Sidebar">
+	
+	 <!--右边预留位置开始 -->
+	 <div id="RightBanner"></div>
+	 <!--预留位置结束 -->
+	 
+	 <!--Sidebar End -->
+    </div>
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

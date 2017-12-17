@@ -1,0 +1,80 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu1>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+<!--Head End! -->
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	 <div id="Subtitle">$subtitle</div>
+	 <div id="Dg">
+	 <form method="post" action="dg.php">
+	 <li><span class="left">你点的歌名：</span><font style="color:red;">$name</font></li>
+<!--
+EOT;
+if($cknumon){
+print <<<EOT
+-->
+	<li><span class="left">验 证 码：</span>
+	   <input name="gdcode" type="text" size="4" maxLength="4" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"/> <img src="ck.php?" align="absmiddle" onclick="this.src='ck.php?'" /> <span class="zs">如果看不清验证码，请点图片刷新</span></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	 <li><span class="left">你 的 名 字：</span>
+	   <input name="user" type="text"  class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" value="$usernicheng" size="30"><span class="zs"> 最好是中文的，否则别人怎么知道你是谁呢~</span></li>
+	 <li><span class="left">想 送 给：</span>
+	   <input name="user2" type="text"  class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"  size="30"><span class="zs"> ^_^ 这个就不用多说了吧~</span></li>
+<!--
+EOT;
+if($dgmail){
+print <<<EOT
+-->
+	<li><span class="left">对方 E-mail：</span>
+	   <input name="umail" type="text"  class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" value="" size="30"> <span class="zs">E-mail 应该有吧</span></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	 <li><span class="left">想要说的话：</span>
+	   <textarea rows="7" name="say" cols="40" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"></textarea></li>
+	  <br></br>
+	 <li><span class="left"></span>
+	   <input type="submit" value="确认点歌" class="SubmitButton"> 
+        <input name="time" type="hidden" value="$timestamp"> 
+        <input name="songname" type="hidden"  value="$name"> 
+        <input name="id" type="hidden" value="$id"> 
+		<input name="action" type="hidden" value="add"> 
+        <input type="reset" onClick="javascript:history.back(1)" value="重新填写" class="SubmitButton"></li>
+		</form>
+	 </div>
+    </div>
+    <!--Sidebar Begin -->
+	<div id="Sidebar">
+	
+	 <!--右边预留位置开始 -->
+	 <div id="RightBanner"></div>
+	 <!--预留位置结束 -->
+    </div>
+	<!--Sidebar End -->
+	
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

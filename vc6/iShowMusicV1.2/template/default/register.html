@@ -1,0 +1,117 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu1>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	 <div id="Subtitle">$subtitle</div>
+	 <div id="Reg">
+	 <script language="JavaScript" type="text/javascript">
+function javacheck(formct)
+	{   
+		if (formct.usernamec.value=="" || formct.userpassc.value=="" || formct.userpassc1.value==""||formct.usernicheng.value==""||formct.usermail.value=="")
+		{
+			alert("请填写所有项目");
+			return false; 
+		}
+	}
+function checkname(){
+	var name = document.getElementById("usernamec").value;
+	if (name.length<3 || name.length>12){
+		document.getElementById("name_info").innerHTML = "<font color=\"red\">用户名长度请控制在3-12字节以内</font>";
+	} else{
+		document.getElementById("name_info").innerHTML = "";
+	}
+}
+	 
+function checkpwd(){
+	var pwd = document.getElementById("userpassc").value;
+	var pwdrepeat = document.getElementById("userpassc1").value;
+	if (pwd.length<6){
+		document.getElementById("pwd_info").innerHTML = "<font color=\"red\">密码太少，请用6位以上</font>";
+	} else{
+		document.getElementById("pwd_info").innerHTML = "";
+	}
+	if(pwdrepeat){
+		checkpwdrepeat();
+	}
+}
+function checkpwdrepeat(){
+	var pwd = document.getElementById("userpassc").value;
+	var pwdrepeat = document.getElementById("userpassc1").value;
+	if (pwdrepeat==pwd){
+		document.getElementById("pwdrepeat_info").innerHTML = "";
+	} else{
+		document.getElementById("pwdrepeat_info").innerHTML = "<font color=\"red\">两次输入的密码不一致，请检查后重试。</font>";
+	}
+}
+function checkemail(){
+	var email = document.getElementById("usermail").value;
+	var myReg = /^[-a-zA-Z0-9_\.]+@([0-9A-Za-z][0-9A-Za-z-]+\.)+[A-Za-z]{2,5}$/; 
+	if(myReg.test(email)){
+		document.getElementById("email_info").innerHTML = "";
+	} else{
+		document.getElementById("email_info").innerHTML = "<font color=\"red\">Email 格式错误!</font>";
+	}
+}
+</script>
+	 <form method="post" action="register.php" onSubmit="return javacheck(this)">
+<!--
+EOT;
+if($cknumon){
+print <<<EOT
+-->
+	<li><span class="left">验 证 码：</span>
+	   <input name="gdcode" type="text" size="4" maxLength="4" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"/> <img src="ck.php?" align="absmiddle" onclick="this.src='ck.php?'" /> <span class="zs">如果看不清验证码，请点图片刷新</span></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+	 <li><span class="left">用 户 名：</span>
+	   <input name="usernamec" type="text" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30">
+	   <span class="zs"> 不能有空格，可以是中文，长度在3-12字节以内</span></li>
+	 <li><span class="left">个性昵称：</span>
+	   <input name="usernicheng" type="text" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30"><span class="zs"> 网站显示用,应该有吧！呵呵~ 可以是中文</span></li>
+	 <li><span class="left">登录密码：</span>
+	   <input name="userpassc" onchange="checkpwd();" type="password" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30"><span class="zs"> 英文字母或数字等不少于6位<br /><span id="pwd_info"></span></span></li>
+	 <li><span class="left">确认密码：</span>
+	   <input name="userpassc1" type="password" onchange="checkpwdrepeat();" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30"><span class="zs"> ^_^ 这个就不用多说了吧~<br /><span id="pwdrepeat_info"></span></span></li>
+	 <li><span class="left">你的email：</span>
+	   <input name="usermail" type="text" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)" size="30" onchange="checkemail();"><span class="zs"> 用来找回你的密码, 本站不会公开你的email！<br /><span id="email_info"></span></span></li>
+	 <li><span class="left"></span>
+	   <input type="submit" value="注册会员" class="SubmitButton"> 
+        <input name="time" type="hidden" value="$timestamp"> 
+		<input name="action" type="hidden" value="save"> 
+		<input type="hidden" name="forward"  value="$forward">
+        <input type="reset"  value="重新填写" class="SubmitButton"></li>
+		</form>
+	 </div>
+    </div>
+    <!--Sidebar Begin -->
+	<div id="Sidebar">
+	 <!--右边预留位置开始 -->
+	 <div id="RightBanner"></div>
+	 <!--预留位置结束 -->
+    </div>
+	<!--Sidebar End -->
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

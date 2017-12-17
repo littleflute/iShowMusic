@@ -1,0 +1,1138 @@
+/* ============全局============ */
+html {height:100%;}
+div,ul,ol,form {
+	margin:0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0px;
+}
+img {border:0;}
+table {font-size:12px;}
+input {
+	font-family:tahoma,Arial,Helvetica,sans-serif;
+	font-size:12px;
+}
+h1,h2,h3,h4,h5,h6,h7 {margin:0;padding:0;text-align:left;font-size:12px;font-weight:400;}
+p {
+	margin:0;
+	padding: 3px;
+}
+
+body {
+PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; BACKGROUND: url(bg.png) #fff repeat-x left top; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #444; WORD-BREAK: break-all; LINE-HEIGHT: 150%; PADDING-TOP: 0px; FONT-FAMILY: tahoma,Arial,Century Gothic,verdana,Helvetica,sans-serif; HEIGHT: 100%; TEXT-ALIGN: center}
+a:link{text-decoration:none;color:#3772AE;}
+a:visited {text-decoration:none;color:#3772AE;}
+A:hover {
+	color: #fe7f00; text-decoration: underline
+}
+A:active {
+	color: #fe7f00; text-decoration: none
+}
+/* class */
+.right{
+float:right;
+}
+.red{
+color:red;
+}
+.green{
+color:green;
+}
+.SubmitButton{
+	width:110px;
+	border:0px;
+	background:url(button-bg.gif);
+	padding:3 0 3 0;
+	font-size:14px;
+	color: #3366CC;
+}
+.sbt{
+	background:url(sbt.gif) repeat-x bottom;
+	padding:1;
+	border: 1px solid #70B1CF;
+	color: #3366CC;
+}
+.Input{
+  border:#84a1bd 1px solid ;
+}
+/* ============布局============ */
+#Head {clear:both;WIDTH: 978px;margin:0 auto;height:100px;}
+#Head #logo{
+DISPLAY: block; BACKGROUND: url(logo.jpg) no-repeat left top; FLOAT: left; OVERFLOW: hidden; WIDTH: 260px; TEXT-INDENT: -9999px;HEIGHT: 100px
+}
+#Head_menu {
+	clear:both;
+	height:32px;
+	margin-top: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 10px;
+	float: left;
+	width: auto;
+}
+#Head #Head_menu {
+	BACKGROUND: url(menu.png) no-repeat center top; FLOAT: right; MARGIN: 30px 0px 0px 0px; WIDTH: 580px; HEIGHT: 70px
+}
+#Head #Head_menu UL {
+	PADDING-RIGHT: 50px; PADDING-LEFT: 50px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#Head #Head_menu UL LI {
+	LIST-STYLE-POSITION: outside; FLOAT: left; LIST-STYLE-TYPE: none
+}
+#Head #Head_menu UL LI A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-WEIGHT: 600; PADDING-BOTTOM: 0px; WIDTH: 70px; COLOR: #fff; PADDING-TOP: 5px; LETTER-SPACING: 5px; HEIGHT: 35px
+}
+#Head #Head_menu UL LI A:hover {
+	BACKGROUND: url(menu_a.png) no-repeat left top; TEXT-DECORATION: none
+}
+#Head #Head_menu UL#menu1 LI.l1 A {
+	BACKGROUND: url(menu_a.png) no-repeat left top
+}
+#Head #Head_menu UL#menu2 LI.l2 A {
+	BACKGROUND: url(menu_a.png) no-repeat left top
+}
+#Head #Head_menu UL#menu3 LI.l3 A {
+	BACKGROUND: url(menu_a.png) no-repeat left top
+}
+#Head #Head_menu UL#menu4 LI.l4 A {
+	BACKGROUND: url(menu_a.png) no-repeat left top
+}
+#Head #Head_menu UL#menu5 LI.l5 A {
+	BACKGROUND: url(menu_a.png) no-repeat left top
+}
+#Head #Head_menu UL#menu6 LI.l6 A {
+	BACKGROUND: url(menu_a.png) no-repeat left top
+}
+#Head #Head_menu UL#menu7 LI.l7 A {
+	BACKGROUND: url(menu_a.png) no-repeat left top
+}
+#head #Head_top {
+	color: #FFF;
+	height: 25px;
+	width: 200px;
+	float: right;
+	text-align: left;
+}
+#head #Head_top a{
+	color: #FFF;
+}
+
+
+/* ============主体内容============ */
+#Content { margin-top:10px;width:978px;text-align:left;height:69%;}
+#Content #Main {
+	margin: 0;
+	padding: 10px;
+}
+#Content #Main #Body {
+	float:left;
+	width:700px;
+	overflow-x:hidden;
+	padding-top: 0;
+	padding-right: 10px;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+#Content #Main #IndexTop {
+	float: left;
+	width: 690px;
+}
+#Content #Main #IndexBottom {
+	float: left;
+	width: 690;
+}
+#Content #Main #Sidebar {
+	float:right;
+	width:240px;
+	overflow-x:hidden;
+}
+
+#Content #Main #Sidebar #NowReg {
+	padding: 1px;
+	border: 1px solid #DEDEDE;
+	width: 200px;
+	margin-top: 50px;
+}
+
+/* 右侧 Banner 广告*/
+#Content #Main #Sidebar #RightBanner {
+	width:242px;
+}
+/* 右侧 Banner 广告*/
+
+#Content #Main #Sidebar #Top {
+	background-image: url(sidebar_top.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 36px;
+	width: 242px;
+	text-align: left;
+	padding-top: 10px;
+	text-indent: 16px;
+	overflow:hidden;
+	padding-bottom:0px;
+}
+#Content #Main #Sidebar #Top h2{
+	color: #00A6E6;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 2px;
+
+}
+#Content #Main #Sidebar #logincontent {
+	background-image: url(side_bg.png);
+	background-repeat: repeat-y;
+	width: 242px;
+}
+#Content #Main #Sidebar #Bottom {
+	background-image: url(sidebar_bottom.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 242px;
+	margin-bottom: 10px;
+}
+#Content #Main #Sidebar #Commend {
+	background-image: url(sidebar_top.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 36px;
+	width: 242px;
+	text-align: left;
+	padding-top: 10px;
+	text-indent: 16px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #DEDEDE;
+	margin-top: 10px;
+}
+
+#Content #Main #Sidebar #Commend  h2{
+	color: #7DA721;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 2px;
+
+}
+#Content #Main #Sidebar #CommendList {
+	background-image: url(side_bg.png);
+	background-repeat: repeat-y;
+	width: auto;
+	padding: 5px 8px 8px 12px;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+#Content #Main #Sidebar #CommendList a{
+	color: #479CD2;
+}
+
+#Content #Main #Sidebar #CommendList li {
+	color:#4C5360;
+	padding-top: 3px;
+}
+/* 搜索框 */
+#Content #Main #Sidebar #Search {
+    MARGIN: 0px 0px 5px 0px;
+}
+#Content #Main #Sidebar #Search h2{
+    PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-WEIGHT: 600; FONT-SIZE: 16px; PADDING-BOTTOM: 5px; OVERFLOW: hidden; COLOR: #00A6E6; PADDING-TOP: 10px; BORDER-BOTTOM: #DCE4ED 1px solid; LETTER-SPACING: 2px
+}
+#Content #Main #Sidebar #Search .SearchMain {
+	text-align: left;
+	padding: 10px;
+	line-height:25px;
+}
+
+
+/* 登陆框 */
+#Content #Main #Sidebar #logincontent #Login {
+	float:left;
+	margin-right:10px;
+	width:222px;
+	margin-left: 10px;
+	padding: 5px 10px 0px 10px;
+}
+#Content #Main #Sidebar #logincontent #Login li {
+	height: 25px;
+}
+#Content #Main #Sidebar #logincontent #Login .indexlogin{
+    width:66; 
+	height:23; 
+	border:0; 
+	background:url(loginbt.gif)
+}
+#Content #Main #Sidebar #logincontent #Login .indexreg{
+    width:66; 
+	height:23; 
+	border:0; 
+	background:url(regbt.gif)
+}
+#Content #Main #Sidebar #logincontent .login_input {
+	width:150px;
+	border: #84a1bd 1px solid;
+}
+ 
+/*首页点歌信息*/
+#Content #Main #Body #IndexTop #Diange {
+	height: 20px;
+	width: 480px;
+	margin-top: 0px;
+	margin-left: 20px;
+	margin-bottom: 7px;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	float:left;
+}
+#Content #Main #Body #IndexTop #Diange a{
+	font-weight: 600;
+	color: #E7B60C;
+	font-size: 13px;
+}
+#Content #Main #Body #IndexTop #Diange .DiangeList a{
+	font-weight: normal;
+	color: #ECA022;
+	font-size: 12px;
+}
+
+/* 首页 Flash 广告框 */
+#Content #Main #Body #IndexTop #FlashBanner {
+	padding: 3px;
+	width: 467px;
+	border: 1px solid #DEDEDE;
+	margin-left: 205px;
+}
+
+/* 歌手导航 */
+#Content #Main #Body #SingerNav {
+	float: left;
+	width: 180px;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+#Content #Main #Body #SingerNav h2{
+	color: #0E91CF;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 4px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #F2F2F2;
+	padding-bottom: 3px;
+	margin-bottom:2px;
+	text-indent: 6px;
+}
+#Content #Main #Body #SingerNav li{
+	font-size: 13px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #F2F2F2;
+	padding-left: 12px;
+	width: 90%;
+	line-height: 28px;
+}
+#Content #Main #Body #SingerNav a{
+    display: block;
+	padding-left: 4px;
+}
+#Content #Main #Body #SingerNav a:hover{
+	background-color:#0CA3DC;
+	text-decoration:none;
+	color: #FFFFFF;
+}
+/* 首页公告栏 */
+#Content #Main #Sidebar #Notice {
+    MARGIN-Bottom:15px;
+	width:242px;
+	overflow:hidden;
+	height:150px;
+}
+#Content #Main #Sidebar #Notice h2{
+    PADDING-RIGHT: 0px; PADDING-LEFT: 15px; FONT-WEIGHT: 600; FONT-SIZE: 16px; PADDING-BOTTOM: 5px; OVERFLOW: hidden; COLOR: #E7B60C; PADDING-TOP: 5px; BORDER-BOTTOM: 1px solid #E8E8E8 ; LETTER-SPACING: 2px; margin-bottom:10px
+}
+#Content #Main #Sidebar #Notice p{
+   margin-bottom:10px;
+   margin-left:10px;
+}
+
+/* 首页试听排行 */
+#Content #Main #Sidebar #PlayTop {
+	float: left;
+	width: 242px;
+	margin-left: 0px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	break-word:break-all;
+	white-space:nowrap;
+}
+#Content #Main #Sidebar #PlayTop h2{
+	color: #0E91CF;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E8E8E8;
+	padding-bottom: 3px;
+	padding-left:12px;
+	margin-bottom:5px;
+}
+#Content #Main #Sidebar #PlayTop ul{
+	text-align: left;
+	padding: 0px 10px 10px 10px;
+}
+#Content #Main #Sidebar #PlayTop li{
+    height:25px;
+	line-height:25px;
+	padding-left:10px;
+	background:url(line.gif) repeat-x bottom;
+}
+#Content #Main #Sidebar #PlayTop a:hover{
+	background-color:#0CA3DC;
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+/* 首页最新音乐 */
+#Content #Main #Body #IndexBottom #MusicUpdata {
+	font-size: 14px;
+	font-weight: 600;
+	color: #0E91CF;
+	height: 25px;
+	width: 695px;
+	padding-left:6px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #0E91CF;
+	margin-top: 5px;
+	letter-spacing: 2px;
+}
+#Content #Main #Body #IndexBottom #MusicUpdata .randplay{
+   font-size:12px;
+   float:right;
+   font-weight: normal;
+   padding-right:10px;
+   letter-spacing: 0px;
+}
+#Content #Main #Body #IndexBottom #MusicUpdata .update:link,.update:visited{
+	color:#0E91CF;
+}
+#Content #Main #Body #IndexBottom .NewMusic{
+	clear:both;
+	float:left;
+	width:695px;
+	margin-top: 10px;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent{
+	float:left;
+	width:220px;
+	padding:1px;
+	border:1px solid #B6DFFB;
+	margin:0px 5px 10px 5px;
+	background:#F1FAFF;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent h2{
+    height:28px;
+	line-height:28px;
+	padding-left:12px;
+	font-weight:600;
+	background:url(newsbg.gif) repeat-x;
+	color:#0E91CF;
+	border-bottom:1px solid #B6DFFB;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent h2 a{
+   color:#000;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent ul{
+    padding:2px;
+	list-style:none;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent li{
+	height: 25px;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent .songname{
+    float:left;
+	width:155px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	break-word:break-all;
+	white-space:nowrap;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent .singername{
+	width:52px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	break-word:break-all;
+	white-space:nowrap;
+	float:right;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent .songname a{
+	color: #479CD2;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent .singername a{
+	float:right;
+	color: #999;
+}
+#Content #Main #Body #IndexBottom .NewMusic .NewContent a:hover{
+	background-color:#0CA3DC;
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+/* 搜索框 */
+#SearchBox {
+   width:690px;
+   border:1px solid #A2C0D8;
+   padding:1px;
+   margin:10px 0px 10px 0px;
+}
+#SearchBox #SearchMain{
+   background:url(sbg.gif) repeat-x bottom;
+   padding:15px;
+   text-align:left;
+   height:60px;
+}
+#SearchBox #SearchMain .SearchInput{
+   width:370px;
+   float:left;
+   margin-top:0px;
+}
+#SearchBox #SearchMain .SearchInput .input{ 
+   height:25px; width:250px; padding:4px 0px 2px 10px; border:none; border:1px solid #7c9bb7;
+}
+#SearchBox #SearchMain .SearchInput .btn{
+   width:60px; height:25px; border:0; cursor:pointer; background:url(s_btn1.gif) no-repeat; 
+}
+#SearchBox #SearchMain .SearchInput .here{
+   width:60px; height:25px; border:0; cursor:pointer; background:url(s_btn2.gif) no-repeat; 
+}
+#SearchBox #SearchMain .SearchType{
+   margin-top:5px;
+   width:280px;
+   float:left;
+}
+#SearchBox #SearchMain span.hotwords{
+   margin-top:5px;
+   width:650px;
+   float:left;
+   padding-left:30px;
+   color:#999;
+}
+/* 友情链接 */
+#ShareLinks{
+   width:958px;
+   margin:10px 20px 0 20px;
+   padding:1px;
+   border:1px solid #E8E8E8;
+   color:#666;
+}
+#ShareLinks h2{
+   height:24px;
+   line-height:24px;
+   font-size:14px;
+   font-weight:600;
+   padding-left:12px;
+   background:url(linkbg.gif) repeat-x;
+   border-bottom:1px solid #E8E8E8;
+   color:#666;
+}
+#ShareLinks .linkcon{
+   padding:0px 10px;
+   text-align:left;
+}
+#ShareLinks .text-link{
+   display:block;
+   padding:5px 3px 3px 3px;
+   float:left;
+   height:33px;
+   margin:0 5px;
+}
+#ShareLinks .text-link a{
+  color:#666;
+}
+#ShareLinks .pic-link{
+   display:block;
+   padding:1px;
+   width:90px;
+   height:33px;
+   float:right;
+   margin:0 5px;
+}
+/* 页面底部 */
+#Footer {
+    color:#999;
+    width:100%;
+	float:left;
+	height:73px;
+	text-align:left;
+	background:#fff url("Footer.png") repeat-x left top;
+	padding-top: 5px;
+	padding-left: 30px;
+	margin-bottom: 0px;
+}
+#Footer .CopyRight {
+	margin-top: 25px;
+	text-align: left;
+	line-height:20px;
+	width:48%;
+	float:left;
+}
+#Footer .FootMenu {
+    color:#999;
+	margin-top: 25px;
+	text-align: right;
+	padding-top: 20px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	width:48%;
+	float:left;
+}
+#Footer .FootMenu a{
+    color:#999;
+}
+/* 其它主要页面*/
+#Content #Main #Body #Subtitle {
+	font-size: 16px;
+	font-weight: 600;
+	color: #0E91CF;
+	letter-spacing: 2px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #0E91CF;
+	height: 35px;
+}
+#Content #Main #Sidebar #SingerNav {
+	float: left;
+	width: 240px;
+	margin-top: 7px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+#Content #Main #Sidebar #SingerNav h2{
+	color: #8BA72E;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color:  #E8E8E8;
+	padding-bottom: 3px;
+	margin-bottom:2px;
+	text-indent: 6px;
+}
+#Content #Main #Sidebar #SingerNav a{
+    display:block;
+	padding-left:4px;
+}
+#Content #Main #Sidebar #SingerNav li{
+	font-size: 13px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #F2F2F2;
+	padding-left: 12px;
+	width: 90%;
+	line-height: 28px;
+}
+#Content #Main #Sidebar #SingerNav a:hover{
+	background-color:#0CA3DC;
+	text-decoration:none;
+	color: #FFFFFF;
+}
+#Content #Main #Body #List {
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	list-style-type: none;
+}
+#Content #Main #Body #List li{
+    font-size:13px;
+	height:30px;
+	background-image: url(line.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding-top: 2px;
+	padding-left: 5px;
+}
+#Content #Main #Body #List a{
+	color:#0575C6;
+	text-decoration: none;
+}
+#Content #Main #Body #List a:hover{
+	color:#FFF;
+	background: #0E81DE;
+}
+#Content #Main #Body #List .songname {
+	float: left;
+	width: 310px;
+}
+#Content #Main #Body #List .singer {
+	float: left;
+	width: 130px;
+}
+#Content #Main #Body #List .play ,.dg,.sc,.down{
+	float: left;
+	width: 50px;
+	text-align: center;	
+}
+#Content #Main #Body #List .scrq{
+	float: left;
+	width: 70px;
+	text-align: center;	
+}
+#Content #Main #Body #List .PageNav2 {
+	font-size:12px;
+	background-color: #EFEFEF;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	border: 1px solid #DEDEDE;
+	float:left;
+	width:100%;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+}
+
+#Content #Main #Body #List .PageNav {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 0px; FONT-SIZE: 12px; COLOR: #313031; FONT-FAMILY: Verdana,Tahoma,Arial,Helvetica,Sans-Serif; BACKGROUND-COLOR: #fff; TEXT-ALIGN: RIGHT;width:100%;margin-top: 15px;height:25px
+}
+#Content #Main #Body #List .PageNav A {
+	TEXT-ALIGN: center; BORDER: #b7d8ee 1px solid; PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; MARGIN: 0px 2px; COLOR: #0030ce; TEXT-DECORATION: none
+}
+#Content #Main #Body #List .PageNav A:hover {
+	BORDER-RIGHT: #b7d8ee 1px solid; BORDER-TOP: #b7d8ee 1px solid; BORDER-LEFT: #b7d8ee 1px solid; COLOR: #0066a7; BORDER-BOTTOM: #b7d8ee 1px solid; BACKGROUND-COLOR: #d2eaf6
+}
+#Content #Main #Body #List .PageNav A:active {
+	BORDER-RIGHT: #b7d8ee 1px solid; BORDER-TOP: #b7d8ee 1px solid; BORDER-LEFT: #b7d8ee 1px solid; COLOR: #0066a7; BORDER-BOTTOM: #b7d8ee 1px solid; BACKGROUND-COLOR: #d2eaf6
+}
+#Content #Main #Body #List .PageNav SPAN.current {
+	TEXT-ALIGN: center; BORDER-RIGHT: #b7d8ee 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #b7d8ee 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 3px; MARGIN: 0px 2px; BORDER-LEFT: #b7d8ee 1px solid; COLOR: #444444; PADDING-TOP: 3px; BORDER-BOTTOM: #b7d8ee 1px solid; BACKGROUND-COLOR: #d2eaf6
+}
+
+/*歌手分类*/
+#Content #Main #Body #SortList {
+	float: left;
+	width: 98%;
+	margin-top: 10px;
+}
+#Content #Main #Body #SortList h2 {
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin: 10px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #DEDEDE;
+	clear: both;
+	width: 100%;
+}
+#Content #Main #Body #SortList #Content {
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 45px;
+	clear: both;
+	width: 99%;
+}
+#Content #Main #Body #SortList .SingerContent{
+	float: left;
+	height: 25px;
+	width: 150px;
+}
+/*点歌页面*/
+#Content #Main #Body #Dg {
+	float: left;
+	width: 85%;
+	list-style-type: none;
+	margin: 30px;
+	border:1px solid #B6DFFB;
+	background:#F1FAFF;
+	padding: 20px;
+}
+#Content #Main #Body #Dg li{
+    font-size:14px;
+	height:40px;
+}
+#Content #Main #Body #Dg .left{
+	width:100px;
+	text-align: right;
+	vertical-align: middle;
+	clear: both;
+	float: left;
+}
+#Content #Main #Body #Dg .zs{
+   font-size:12px;
+   color:#ABABAB;
+}
+/*注册页面*/
+#Content #Main #Body #Reg {
+	float: left;
+	width: 85%;
+	list-style-type: none;
+	margin: 30px;
+	border:1px solid #B6DFFB;
+	background:#F1FAFF;
+	padding: 20px;
+}
+#Content #Main #Body #Reg li{
+    font-size:14px;
+	height:40px;
+}
+#Content #Main #Body #Reg .left{
+	width:90px;
+	text-align: right;
+	vertical-align: middle;
+	clear: both;
+	float: left;
+}
+#Content #Main #Body #Reg .zs{
+   font-size:12px;
+   color:#ABABAB;
+}
+#Content #Main #Body #Reg #pwd_info,#pwdrepeat_info,#email_info{
+	height: 20px;
+	float: left;
+	width: auto;
+	margin-left: 100px;
+}
+/*会员中心页面*/
+#Content #Main #Body #Member {
+	float: left;
+	width: 92%;
+	list-style-type: none;
+	margin: 20px;
+}
+#Content #Main #Body #Member li{
+    font-size:13px;
+	height:35px;
+}
+#Content #Main #Body #Member .title{
+	font-size: 13px;
+	color: #666;
+    width:100%;
+	clear: both;
+	padding: 5px;
+}
+#Content #Main #Body #Member .Mcontent{
+	margin-top: 10px;
+	width: 100%;
+}
+#Content #Main #Body #Member .Mcontent .icon{
+	float:left;
+	padding: 2px;
+	border: 1px solid #F2F2F2;
+}
+#Content #Main #Body #Member .Mcontent .MemTitle a{
+	font-size:13px;
+	font-weight:600;
+	float:left;
+	width:500px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 20px;
+	color:#006699;
+}
+#Content #Main #Body #Member .Mcontent .zs{
+	float:left;
+	height:25px;
+	width:500px;
+	line-height: 12px;
+	color: #AEAEAE;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+
+}
+/* 歌词秀 */
+#lrcollbox td, #lrcollbox font { font-size: 13px;}
+#lrcoll td { color:#0080C0; cursor: default; }
+#lrcbox { color:#00FF00 }
+#lrcfilter { filter: alpha(opacity=0) }
+#lrcbc { color:#FFFF33 }
+
+/*播放页面*/
+#Content #Play{
+	padding:10px;
+}
+#Content #Play #Subtitle{
+	font-size: 16px;
+	font-weight: 600;
+	color: #0E91CF;
+	letter-spacing: 2px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #0E91CF;
+	height: 35px;
+	margin-bottom: 10px;
+}
+#Content #Play #Left{
+	width:480px;
+	float:left;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#Content #Play #Right{
+	width:470px;
+	float:left;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#Content #Play #Left #UrlCopy {
+	float: left;
+	width: 100%;
+	border: 1px solid #E3E6EB;
+	padding: 1px;
+	margin-bottom:10px;
+}
+#Content #Play #Left #UrlCopy h2{
+	font-size: 14px;
+	font-weight: 600;
+	color: #0E91CF;
+	padding-left: 10px;
+	background:url(titlebg.jpg) repeat-x;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border-bottom: 1px solid #E3E6EB;
+}
+#Content #Play #Left #UrlCopy .copycontent{
+    padding:5px 5px 5px 15px;
+}
+#Content #Play #Left #MemWindow {
+	float: left;
+	width: 100%;
+	border: 1px solid #E3E6EB;
+	padding: 1px;
+}
+#Content #Play #Left #MemWindow .title {
+	font-size: 14px;
+	font-weight: 600;
+	color: #0E91CF;
+	padding-left: 10px;
+	background:url(titlebg.jpg) repeat-x;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border-bottom: 1px solid #E3E6EB;
+}
+#Content #Play #Left #MemWindow .menu1 {
+	background: url(sc.gif) no-repeat;
+	text-align:right;
+	font-size:14px;
+	font-weight:600;
+	float: left;
+	width: 83px;
+	height:34px;
+	margin: 5px 15px;
+	padding:5px 10px auto 35px;
+}
+#Content #Play #Left #MemWindow .menu2 {
+	background: url(dg.gif) no-repeat;
+	float: left;
+	text-align:right;
+	font-size:14px;
+	font-weight:600;
+	width: 83px;
+	height:34px;
+	margin: 5px 15px;
+	padding:5px 10px auto 35px;
+}
+#Content #Play #Left #MemWindow .menu3 {
+	background: url(bc.gif) no-repeat;
+	float: left;
+	text-align:right;
+	font-size:14px;
+	font-weight:600;
+	width: 83px;
+	height:34px;
+	margin: 5px 15px;
+	padding:5px 10px auto 35px;
+}
+#Content #Play #Left #MemWindow .menu4 {
+	background: url(down.gif) no-repeat;
+	float: left;
+	text-align:right;
+	font-size:14px;
+	font-weight:600;
+	width: 83px;
+	height:34px;
+	margin: 5px 15px;
+	padding:5px 10px auto 35px;
+}
+/* 播放页广告*/
+#Content #Play #Left #PlayAd {
+    width:460px;
+	margin:5 0 5 0;
+}
+#Content #Play #Right #SongInfo {
+	float: left;
+	width: 100%;
+	border: 1px solid #E3E6EB;
+	padding: 1px;
+}
+#Content #Play #Right #SongInfo .title{
+	font-size: 14px;
+	font-weight: 600;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #0E91CF;
+	background: url(titlebg.jpg) repeat-x;
+	border-bottom:1px solid #E3E6EB;
+}
+#Content #Play #Right #SongInfo .Info {
+	padding: 10px;
+	float: left;
+	width: 100%;
+	list-style-type: none;
+}
+#Content #Play #Right #SongInfo .Info li{
+   height:22px;
+}
+
+#Content #Play #Right #PostComment {
+	float: left;
+	width: 100%;
+	border: 1px solid #E3E6EB;
+	padding: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#Content #Play #Right #PostComment .title{
+	font-size: 14px;
+	font-weight: 600;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #0E91CF;
+	background: url(titlebg.jpg) repeat-x;
+	border-bottom:1px solid #E3E6EB;
+}
+#Content #Play #Right #PostComment .Info {
+	padding: 10px;
+	float: left;
+	width: 100%;
+	list-style-type: none;
+}
+#Content #Play #Right #PostComment .Info li{
+   height:22px;
+}
+#Content #Play #Right #PlayComment {
+	float: left;
+	width: 100%;
+	border: 1px solid #E3E6EB;
+	padding: 1px;
+	margin-bottom: 10px;
+}
+#Content #Play #Right #PlayComment .ptitle{
+	font-size: 14px;
+	font-weight: 600;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #0E91CF;
+	background: url(titlebg.jpg) repeat-x;
+	border-bottom:1px solid #E3E6EB;
+}
+#Content #Play #Right #PlayComment .maincontent {
+	padding: 10px;
+	float: left;
+	width: 100%;
+	list-style-type: none;
+	color:#999;
+}
+#Content #Play #Right #PlayComment .maincontent .clist {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #DEDEDE;
+	padding-bottom: 5px;
+}
+#Content #Play #Right #PlayComment .maincontent .clist .main{
+	font-size:14px;
+	color:#444;
+	width:100%;
+	line-height:20px;
+	padding:5px 0px 3px 20px;
+}
+/* 帮助页面 */
+#Content #Main #Body #Help {
+	width: 100%;
+	line-height: 22px;
+	color: #6F756F;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+#Content #Main #Body #Help h2 {
+	font-size: 13px;
+	font-weight: 600;
+	color: #4194C5;
+	line-height: 25px;
+}
+#Content #Main #Body #Help a {
+	color: #4194C5;
+}
+/* 页面加载特效 */
+#loader_container { 
+    text-align:center; 
+    position:absolute; 
+    top:40%; 
+    width:100%; 
+    left: 0; 
+} 
+#loader { 
+    font-family:Tahoma, Helvetica, sans; 
+    font-size:11.5px; 
+    color:#000000; 
+    background-color:#FFFFFF; 
+    padding:10px 0 16px 0; 
+    margin:0 auto; 
+    display:block; 
+    width:130px; 
+    border:1px solid #5a667b; 
+    text-align:left; 
+    z-index:2; 
+} 
+#progress { 
+    height:5px; 
+    font-size:1px; 
+    width:1px; 
+    position:relative; 
+    top:1px; 
+    left:0px; 
+    background-color:#8894a8; 
+} 
+#loader_bg { 
+    background-color:#e4e7eb; 
+    position:relative; 
+    top:8px; 
+    left:8px; 
+    height:7px; 
+    width:113px; 
+    font-size:1px; 
+} 

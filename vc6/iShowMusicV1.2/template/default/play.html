@@ -1,0 +1,212 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu1>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Play">
+	 <div id="Subtitle">$subtitle</div>
+    <div id="Left">
+	 <span id="lrcdata">
+<!--
+EOT;
+get_lrc($id);
+print <<<EOT
+-->
+</span>
+<script language=Javascript>player($id);</script>
+<div id="lrcollbox" style="overflow:hidden; height:260; width:460; background-color:#000;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" id="lrcoll" style="position:relative; top: -20px;" oncontextmenu="return false;">
+<tr><td nowrap height="20" align="center" id="lrcwt1"></td></tr>
+<tr><td nowrap height="20" align="center" id="lrcwt2"></td></tr>
+<tr><td nowrap height="20" align="center" id="lrcwt3"></td></tr>
+<tr><td nowrap height="20" align="center" id="lrcwt4"></td></tr>
+<tr><td nowrap height="20" align="center" id="lrcwt5"></td></tr>
+<tr><td nowrap height="20" align="center" id="lrcwt6"></td></tr>
+<tr><td nowrap height="20" align="center">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr><td nowrap height="20"><span id="lrcwt7" style="height:20"></span></td></tr>
+<tr style="position:relative; top: -20px; z-index:6"><td nowrap height="20"><div id="lrcfilter" style="overflow:hidden; width:100%; color:#FFFF33; height:20"></div></td></tr>
+</table>
+</td></tr>
+<tr style="position:relative; top: -20px"><td nowrap height="20" align="center">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr><td nowrap height="20"><span id="lrcbox" style="height:20">歌词加载中</span></td></tr>
+<tr style="position:relative; top: -20px; z-index:6;"><td nowrap height="20"><div id="lrcbc" style="overflow:hidden; height:20; width:0;"></div></td></tr>
+</table>
+</td></tr>
+<tr style="position:relative; top: -40px;"><td nowrap height="20" align="center" id="lrcwt8"></td></tr>
+<tr style="position:relative; top: -40px;"><td nowrap height="20" align="center" id="lrcwt9"></td></tr>
+<tr style="position:relative; top: -40px;"><td nowrap height="20" align="center" id="lrcwt10"></td></tr>
+<tr style="position:relative; top: -40px;"><td nowrap height="20" align="center" id="lrcwt11"></td></tr>
+<tr style="position:relative; top: -40px;"><td nowrap height="20" align="center" id="lrcwt12"></td></tr>
+<tr style="position:relative; top: -40px;"><td nowrap height="20" align="center" id="lrcwt13"></td></tr>
+</table>
+</div> <script language="JavaScript" src="js/lrc.js"></script>
+
+      <!--播放页广告 -->
+	  <div id="PlayAd"><script language="JavaScript" src="Ad/1207643617.js"></script></div>
+	  <!--播放页广告 -->
+	  
+	  <!--URL 复制 -->
+	  <div id="UrlCopy">
+	   <h2>本页地址</h2>
+	   <div class="copycontent"><input type="text"  class="Input" id="musicurl" onfocus="fEvent('focus',this)" onblur="fEvent('blur',this)" onclick="copyUrl(this.id);" onmouseover="fEvent('mouseover',this)" onmouseout="fEvent('mouseout',this)" value="$thisurl" size="65">
+                    <input type="button" value="复制" onclick="copyUrl('musicurl')" class="sbt"/><br><span style="color:#999">[↑音乐地址↑,你可通过QQ或MSN发给你好友]</span></div>
+	  </div>
+	  <!--URL 复制 -->
+
+	  <div id="MemWindow">
+	    <div class="title">会员操作窗口</div>
+		<div class="menu1"><a href=$box title="收藏到我的音乐盒">收 藏</a></div>
+		<div class="menu2"><a href="dg.php?id=$id&name=$songname" title="点此歌送给好友">点 歌</a></div>
+		<div class="menu3"><a href="error.php?errid=$id&errtitle=$songname" title="报告错误">报 错</a></div>
+		<div class="menu4"><a href="$down" title="下载到本地收藏">下 载</a></div>
+      </div>
+    </div>
+	
+    <div id="Right">
+	  <div id="SongInfo">
+	   <div class="title">音乐信息</div>
+	   <div class="Info">
+	     <ul>
+		  <li><strong>歌曲名称：</strong><span class="red">$songname</span></li>
+		  <li><strong>演 唱：</strong><a href="list.php?catid=$catid&singerid=$singerid" target="_blank" title="查看该歌手的其它音乐">$singer_name</a></li>
+	      <li><strong>人 气：</strong> 总共 <span class="red">$viewnum</span> 次，今日 <span class="red">$tviewnum</span> 次</li>
+		  <li><strong>推荐级别：<img src="images/rank/{$hot}star.gif"></strong></li>
+	      <li><strong>发布时间：</strong>$pubtime</li>
+	      <li><strong>LRC 歌词：</strong>$ishavelrc</li>
+	     </ul>
+<!--
+EOT;
+if (!file_exists($datadir."/lrc/$id.lrc") && GetCookie('userlogin')=="1" && GetCookie('userlever')>="1"){
+print <<<EOT
+-->	
+		 <p><span id="ifaddlrc" style="display:none"><iframe frameborder="0" width="100%" height="35" scrolling="no" src="addlrc.php?id=$id&name=$songname"></iframe></span>
+		 <script language="JavaScript" type="text/javascript">
+            function OpenUp(Theup)
+            {
+             Theup.style.display	=	"";
+              }
+          </script>
+		  </p>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+	   </div>
+	  </div>
+	  
+	  
+	  
+	  <div id="PostComment">
+        <div class="title">发表评论</div>
+	    <div class="Info">
+<script language="JavaScript">
+
+byid = document.getElementById;
+
+//表单提交
+function submit_form(){
+var postuser = document.reply.user.value;
+var postcotent = document.reply.content.value;
+
+if (postuser=="" || postcotent=="" )
+		{
+			alert("请填写所有项目");
+			return false; 
+		  }
+document.reply.submit();
+document.reply.content.value = '';
+document.reply.user.value = '';
+byid("post").style.display = 'none';
+byid("msg").innerHTML='<font color=red>评论发表成功</font>';
+}
+
+</script>
+
+          <form method="post" action="comment.php" id="reply" name="reply" target="_blank">
+            <ul>
+              <li>昵 称：
+                <input name="user" type="text" id="user" size="30" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)">
+              </li>
+              <li>评 分：
+                <label>
+                  <img src="images/face/0.gif" width="24" height="24" />
+                  <input type="radio" name="grade" value="0" />
+                  </label>
+                <label>
+                  <img src="images/face/1.gif" width="24" height="24" />
+                  <input type="radio" name="grade" value="1" />
+                <img src="images/face/2.gif" width="24" height="24" />                </label>
+                <label>
+                  <input type="radio" name="grade" value="2" />
+                </label>
+                <label>
+                  <img src="images/face/3.gif" width="24" height="24" />
+                  <input name="grade" type="radio" value="3" checked="checked" />
+                </label>
+                <label>
+                  <img src="images/face/4.gif" width="24" height="24" />
+                  <input type="radio" name="grade" value="4" />
+                </label>
+                <label>
+                  <img src="images/face/5.gif" width="24" height="24" />
+                  <input type="radio" name="grade" value="5" />
+                </label>
+              </li>
+              <li>评 论：
+                <textarea name="content" cols="45" rows="3" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"></textarea>
+              </li>
+<!--
+EOT;
+if($cknumon){
+print <<<EOT
+-->
+	<li style="height:30px;padding-top:4px">验证码：</span>
+	   <input name="gdcode" type="text" size="4" maxLength="4" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this)" onmouseout="fEvent('mouseout',this)"/> <img src="ck.php?" align="absmiddle" onclick="this.src='ck.php?'" /> <span style="color:#CBCBCB">如果看不清验证码，请点图片刷新</span></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+              <li>操 作： <input type="button" value="发表感受" class="sbt" onclick="submit_form()" id="post" /><span id="msg"></span>
+               <input name="id" type="hidden" value="$id" />
+            <input type="hidden" name="action" value="save" />
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+	 
+	  <div id="PlayComment">
+	  <div class="ptitle">网友评论</div>
+	  <div class="maincontent">
+<!--
+EOT;
+get_comment($id);
+print <<<EOT
+-->
+	  </div>
+	</div>
+	
+   </div>
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->

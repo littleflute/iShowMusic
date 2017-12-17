@@ -1,0 +1,86 @@
+<!--
+<?php print <<<EOT
+-->
+  <div id="Head_menu">
+   <UL id=menu2>
+   <li class="l1"><a href="index.php">首页</a></li>
+   <li class="l2"><a href="sort.php">歌手</a></li>
+   <li class="l3"><a href="hot.php">热门</a></li>
+   <li class="l4"><a href="new.php">最新</a></li>
+   <li class="l5"><a href="commend.php">推荐</a></li>
+   <li class="l6"><a href="song.php">点歌</a></li>
+   <li class="l7"><a href="musicbox.php">音乐盒</a></li>
+   </UL>
+  </div>
+</div>
+<!--Head End! -->
+
+<!--Content Begin -->
+<div id="Content">
+  <div id="Main">
+    <div id="Body">
+	 <div id="Subtitle">$subtitle</div>
+	 <div id="SortList">
+	 <!--
+EOT;
+get_sort();
+print <<<EOT
+-->
+	 </div>
+    </div>
+    <!--Sidebar Begin -->
+	<div id="Sidebar">
+	  <div id="Search">
+	   <h2>音乐搜索</h2>
+	   <form name="form" method="post" action="search.php" target="_blank">
+	   <div class="SearchMain"><input name="keyword" size="28" border="0" class="Input" onblur="fEvent('blur',this)" onmouseover="fEvent('mouseover',this)" onfocus="fEvent('focus',this);if(this.value=='输入关键词'){this.value=''}" onmouseout="fEvent('mouseout',this)" type="text" value="输入关键词"/>
+	   <input name="action" type="hidden" value="search" /><input type="submit" value="搜 索" class="sbt"/>
+	   <br />
+	   <input name="type" type="radio" value="name" checked="checked" />
+	   按音乐名称查找
+	   <input name="type" type="radio" value="singer" />按歌手查找</div>
+	   </form>
+	 </div>
+	 
+	 <div id="Commend">
+	   <h2>音乐推荐</h2>
+	 </div>
+	  <div id="CommendList">
+	  	<ul> 
+<!--
+EOT;
+commend($commend,10);
+print <<<EOT
+-->
+	   </ul>
+	 </div>
+	 <div id="Bottom"></div>
+	
+	 <!--右边预留位置开始 -->
+	 <div id="RightBanner"></div>
+	 <!--预留位置结束 -->
+
+	 <div id="Commend">
+	   <h2>试听排行</h2>
+	 </div>
+	  <div id="CommendList">
+	  	<ul> 
+<!--
+EOT;
+top($top,10);
+print <<<EOT
+-->
+	   </ul>
+	 </div>
+	 <div id="Bottom"></div>
+	 
+	 <!--Sidebar End -->
+	 
+    </div>
+  </div>
+</div>
+<!--Content End -->
+
+<!--
+EOT;
+?>-->
