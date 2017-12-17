@@ -1,0 +1,56 @@
+<!--<?php
+include_once PrintEot("head");
+print <<<EOT
+-->
+</head>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF9900}
+-->
+</style><body>
+<center>
+<div style="margin-top:60px; width:50%; text-align:left;"><img src="$skinpath/admin/images/logo.jpg"></div>
+<form action="$REQUEST_URI" method="post">
+<table width="50%" border="0" cellspacing="0" cellpadding="0" class="logintable">
+<!--
+EOT;
+if($msg){
+print <<<EOT
+-->
+<tr><td width="39%" align="center">$msg<br><br><br><center><a href="$basename">返 回 继 续 操 作</a></td></td></tr>
+<!--
+EOT;
+}else{
+print <<<EOT
+-->
+<tr>
+<td width="39%" height="30" align="right">管理用户名：</td>
+<td width="61%" align="left"><input name="adminuser" type="text" style="width:120px" />
+</td>
+</tr>
+<tr>
+<td height="30" align="right">密 码：</td>
+<td align="left"><input name="adminpwd" type="password" style="width:120px"></td>
+</tr>
+<tr>
+<td height="30" align="right"></td>
+<td align="left"><input type=submit name="submit" value=" 登 录 "></td>
+</tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+</table>
+</form>
+<br>
+<br>
+<hr size="1" width="80%" color="#DEDEDE"><br>
+<font color="#999999"><a href="http://www.ishowsky.cn/" target="_blank">iShowMusic官方</a> | <a href="http://www.ishowsky.cn/bbs/" target="_blank">用户交流</a> | <a href="./">进入我的首页</a><br>
+<br>
+Copyright 2008 <a href="$site_url">$site_name</a>　 Powered by <a href="http://www.ishowsky.cn/" target="_blank">iShow<span style="color:#FF9900">Music</span> V $version</a>
+</center>
+</body></html>
+<!--
+EOT;
+?>
+-->

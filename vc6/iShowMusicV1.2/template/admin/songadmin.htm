@@ -1,0 +1,31 @@
+<!--<?php
+include_once PrintEot('top');
+print <<<EOT
+-->
+<form action="$basename&" method=post>
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="6">&nbsp;<strong>点歌列表</strong></td>
+</tr>
+<tr class=bg>
+  <td width="10%" height=25 align="center">点歌者</td>
+  <td width="15%" align="center">赠送给</td>
+  <td width="20%" align="center">所点音乐</td>
+  <td align="center">想说的话</td>
+  <td width="15%" align="center">点歌日期</td>
+  <td width="5%" align="center">删除</td>
+</tr>
+<!--
+EOT;
+get_dg_list($page);
+print <<<EOT
+-->
+</table>
+<br />
+<center><input type="button" name="chkall" value="全 选" onClick="CheckAll(this.form)">   <input type=hidden name="action" value=del><input type=submit value="提 交"></center>
+</form>
+<!--
+EOT;
+include_once PrintEot('adminbottom');
+?>
+-->

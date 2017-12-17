@@ -1,0 +1,45 @@
+<!--<?php
+include_once PrintEot('top');
+print <<<EOT
+-->
+
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25><strong>IP 禁止</strong></td>
+</tr>
+<tr class=bg>
+  <td><br /><strong>
+    　请注意:</strong><br />
+    <br />
+    　　如果你禁止了一个 IP 的话，那么这个 IP 将无法进入本音乐系统的任何程式（后台管理系统除外）！<br /></td>
+</tr>
+<tr class=bg>
+  <td><br /><strong>　
+    说　明:</strong><br />
+    <br />
+    　　你如果要禁止一个 IP，可以直接输入 IP 地址在这里，比如： 202.100.200.100<br />
+    　　如果你要禁止一个 C   类网，那么你可以不输入 IP 的最后一位，比如：202.100.200 <br />
+    　　如果你要禁止一个 B 类网，那么你可以不输入 IP   的最后两位，比如：202.100 <br />
+    　　（你不必输入最后的句号，程式自动过滤以你所输入的为开头的IP）<br />
+    　　如果禁止的是一个 1 或者 2   位的IP，不要补全，如 61.xxx 不用写成 061.xxx <br /></td>
+</tr>
+<tr class=bg>
+<form action="$basename" method="post">
+  <td align="center" valign="top"><br />
+    <strong>
+    请输入您要禁止的IP(每个IP一行）：</strong><br />
+    <br />
+    <textarea cols="60" rows="6" name="wordarray">$bannedips</textarea>
+    <br />
+    <br />
+    <input type=hidden name="action" value="save">  <input type=submit value=" 提 交 "></td>
+  </form>
+  </tr>
+</table>
+<br />
+
+<!--
+EOT;
+include_once PrintEot('adminbottom');
+?>
+-->

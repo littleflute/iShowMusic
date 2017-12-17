@@ -1,0 +1,40 @@
+<!--<?php
+include_once PrintEot('top');
+print <<<EOT
+-->
+<form action="$basename" method="post">
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25><strong>修改我的密码（密码会经过MD5加密）</strong></td>
+</tr>
+<tr class=bg>
+  <input type=hidden name="action" value="save">
+  <td height=25>你的旧密码：<input type=password name="oldpwd" size=25></td>
+ 
+  </tr>
+<tr class=bg>
+  <td height=25>你的新密码：<input type=password name="newpwd" size=25></td>
+</tr>
+<tr class=bg>
+  <td height=25>确认新密码：<input type=password name="repnewpwd" size=25></td>
+</tr>
+<tr class=bg>
+  <td height=25 align="center"><input name="submit" type=submit value=" 提 交 " /></td>
+</tr>
+</table> </form>
+<br />
+ <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+   <tr class="header">
+     <td height="25"><strong>注意</strong></td>
+   </tr>
+   <tr class="bg">
+     <td height="25"> ※ <strong>网站创始人密码 </strong>只能在此页面修改！</td>
+   </tr>
+ </table>
+<br />
+
+<!--
+EOT;
+include_once PrintEot('adminbottom');
+?>
+-->

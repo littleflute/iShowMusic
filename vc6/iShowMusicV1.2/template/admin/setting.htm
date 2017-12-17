@@ -1,0 +1,155 @@
+<!--<?php
+include_once PrintEot('top');
+print <<<EOT
+-->
+<form action="$basename" method="post">
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="2"> 网站基本设置</td>
+</tr>
+<tr class=bg><td width="60%" height=25>音乐网名称</td>
+<td><input type=text name="cfg[site_name]" size=35 value="$site_name"></td></tr>
+<tr class=bg>
+  <td height=25>音乐网地址</td>
+<td><input size=35 name="cfg[site_url]" value="$site_url"></td></tr>
+<tr class=bg><td height=25>管理员信箱</td>
+<td><input size=35 name="cfg[admin_email]" value="$admin_email"></td></tr>
+</table>
+<br />
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="2"> 网站核心功能设置 </td>
+</tr>
+<tr class=bg><td width="60%">默认网站风格</td>
+		<td><select name="cfg[skin]">$choseskin</select></td></tr>
+<tr class=bg>
+  <td>是否开启验证码（推荐开启，防止恶意注册和垃圾评论）</td>
+		<td>
+		<input type=radio value=1 name="cfg[cknum]" $cknum_Y>开启
+		<input type=radio value=0 name="cfg[cknum]" $cknum_N>关闭		</td></tr>
+<tr class=bg>
+  <td>是否开启下载（请不要随便开启，否则音乐文件真实地址容易被暴露）</td>
+		<td>
+		<input type=radio value=1 name="cfg[down]" $down_Y>开启
+		<input type=radio value=0 name="cfg[down]" $down_N>关闭		</td></tr>
+<tr class=bg><td>首页显示友情连接</td>
+		<td>
+			<input type=radio value=1 name="cfg[indexlink]" $indexlink_Y>开启
+			<input type=radio value=0 name="cfg[indexlink]" $indexlink_N>关闭
+		</td>
+</tr>
+<tr class=bg><td>点歌时邮件通知</td>
+		<td>
+			<input type=radio value=1 name="cfg[dgmail]" $dgmail_Y>开启
+			<input type=radio value=0 name="cfg[dgmail]" $dgmail_N>关闭
+		</td>
+</tr>
+<tr class=bg>
+  <td width="60%">音乐列表页每页显示条数</td>
+		<td><input size=35 name="cfg[perpage]" value="$perpage"></td></tr>
+<tr class=bg>
+  <td width="60%">页面防刷新时间</td>
+		<td><input size=35 name="cfg[refreshtime]" value="$refreshtime"></td></tr>
+</table>
+<br />
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+  <tr class="header">
+    <td height="25" colspan="2"> 防盗链设置 </td>
+  </tr>
+  <tr class="bg">
+    <td width="60%">是否开启防盗链</td>
+    <td><input type="radio" value="1" name="cfg[steal]" $steal_Y />
+      开启
+      <input type="radio" value="0" name="cfg[steal]" $steal_N />
+      关闭 </td>
+  </tr>
+  <tr class="bg">
+    <td width="60%"><font color=blue>允许使用音乐地址的域名</font><br />
+      允许范围内的网址才会正常播放音乐，其他则判断为盗链<br />
+      (多个域名用&quot;,&quot;分隔，不要包含   http:// 或其他非域名内容)</td>
+    <td><textarea name="cfg[stealurl]" rows=6 cols=50>$stealurl</textarea></td>
+  </tr>
+</table>
+<br />
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="2"> 与Discuz论坛整合设置 </td>
+</tr>
+
+<tr class=bg>
+  <td>是否开启与Discuz整合</td>
+		<td>
+		<input type=radio value=1 name="cfg[isdiscuz]" $isdiscuz_Y>开启
+		<input type=radio value=0 name="cfg[isdiscuz]" $isdiscuz_N>关闭		</td></tr>
+<tr class=bg>
+  <td width="60%">要整合的论坛地址（后面不要加“/”）：</td>
+		<td><input name="cfg[discuz]" id="cfg[discuz]" value="$discuz" size="35" /></td></tr>
+<tr class=bg>
+  <td width="60%">通行证私有密匙（请与Discuz论坛中设置的一致）：<br /></td>
+		<td><input name="cfg[passport_key]" id="cfg[passport_key]" value="$passport_key" size=35></td></tr>
+</table>
+<br />
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="2"> 动态目录设置(如果发现不可更改，请确认目录可写入)</td>
+</tr>
+<tr class=bg>
+  <td width="60%">音乐数据保存目录 (请设置成别人不容易猜到的名称） </td>
+		<td><input size=35 name="cfg[datapath]" value="$datapath" $datadisabled></td></tr>
+<tr class=bg>
+  <td width="60%">用户数据保存目录 (请设置成别人不容易猜到的名称） </td>
+		<td><input size=35 name="cfg[userpath]" value="$userpath" $userdisabled></td></tr>
+<tr class=bg>
+  <td width="60%">上传音乐文件保存目录 (请设置成别人不容易猜到的名称） </td>
+		<td><input size=35 name="cfg[uppath]" value="$uppath" $updisabled></td></tr>
+<tr class=bg>
+  <td width="60%">模板文件保存目录 </td>
+		<td><input size=35 name="cfg[stylepath]" value="$stylepath" $styledisabled></td></tr>
+</table>
+<br />
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="2"> 会员设置</td>
+</tr>
+<tr class=bg>
+  <td width="60%">是否允许新用户注册</td>
+		<td>
+		<input type=radio value=1 name="cfg[regon]" $regon_Y>开启
+		<input type=radio value=0 name="cfg[regon]" $regon_N>关闭		</td></tr>
+<tr class=bg>
+  <td>新会员初始等级</td>
+		<td><input type="radio" value="0" name="cfg[regright]" $regright_N />
+		  普通会员
+		    <input type="radio" value="1" name="cfg[regright]" $regright_Y />
+        认证会员</td>
+</tr>
+<tr class=bg>
+  <td>会员音乐盒允许保存音乐最大数目</td>
+		<td><input size=35 name="cfg[maxboxnum]" value="$maxboxnum"></td></tr>
+<tr class=bg>
+  <td><font color=blue>禁止在注册用户名中使用的关键词，多个词用","分隔</font><br>例：如果禁用了"<font color=blue>站长</font>"，那么所有含有"<font color=blue>站长</font>"(如：我是<font color=blue>站长</font>)的用户名将被禁止使用</td>
+		<td><textarea name="cfg[regbanname]" rows=6 cols=50>$regbanname</textarea></td></tr>
+</table>
+<br />
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="2"> JS调用设置</td>
+</tr>
+<tr class=bg><td width="60%">是否开启JS调用<br>此功能允许您在以JS方式调用网站的内容</td>
+		<td>
+			<input type=radio value=1 name="cfg[jsifopen]" $jsifopen_Y>开启
+			<input type=radio value=0 name="cfg[jsifopen]" $jsifopen_N>关闭
+		</td></tr>
+<tr class=bg>
+  <td><font color=blue>允许调用网站域名(留空不限制)</font><br>您可以设置允许调用网站内容的域名列表，只有在列表中的域名才能调用网站信息<br>(多个域名用"," 分隔域名，不要包含 http:// 或其他非域名内容)</td>
+		<td><textarea name="cfg[jsurl]" rows=6 cols=50>$jsurl</textarea></td></tr>
+</table><br />
+<center>
+<input type=hidden name="action" value="save">
+<input type=submit value=" 提交 " ></center>
+</form>
+<!--
+EOT;
+include_once PrintEot('adminbottom');
+?>
+-->

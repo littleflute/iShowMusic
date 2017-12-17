@@ -1,0 +1,55 @@
+<!--<?php
+include_once PrintEot('top');
+if(empty($action)){
+print <<<EOT
+-->
+<form method="post" action="$basename">
+<table width=98% border=0 align=center cellpadding=0 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="5">&nbsp;管理友情连接</td>
+</tr>
+<tr align="center">
+<td width="5%" height="25">ID</td>
+<td width="20%">网站名称</td>
+<td width="30%">网站URL</td>
+<td width="36%">网站说明</td>
+<td width="5%">删除</td>
+</tr>
+<!--
+EOT;
+get_sharelinks_list($page);
+print <<<EOT
+-->
+</table>
+ <input name=action type=hidden value="del">
+<br><center><input type="button" name="chkall" value="全 选" onClick="CheckAll(this.form)"> <input type="submit" value="提 交"></center>
+</form>
+<!--
+EOT;
+}elseif($action=='add' || $action=='edit'){
+print <<<EOT
+-->
+<form action="$basename" method=post>
+<input type=hidden name="action" value=$action>
+<input type=hidden name="step" value=2>
+<input type=hidden name="lid" value=$lid>
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="2"> 更新友情连接</td>
+</tr>
+<tr class=bg><td height=25 width=20%>网站名称</td>
+<td><input type=text name="name" size=30 value="$name"></td></tr>
+<tr class=bg><td height=25>网站URL</td>
+<td><input type=text name="url" value="$url" size=30></td></tr>
+<tr class=bg><td height=25>网站说明</td>
+<td><input type=text name="descrip" value="$descrip" size=30></td></tr>
+<tr class=bg><td height=25>网站LOGO<br>[设置文字链接请留空]</td>
+<td><input type=text name="logo" value="$logo" size=30></td></tr>
+</table>
+<br><center><input type=submit value="提 交"></center>
+</form>
+<!--
+EOT;
+}include_once PrintEot('adminbottom');
+?>
+-->

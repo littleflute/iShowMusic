@@ -1,0 +1,103 @@
+<!--<?php
+include_once PrintEot('top');
+if (empty($action)){
+print <<<EOT
+-->
+<script language="JavaScript1.2">
+function SetAction(A){
+    Action.action.value=A;
+	}
+//-->
+</script>
+<form action="$basename&" method=post  name=Action  id=Action>
+<input type=hidden name="action" value="edit">
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+  <tr class="header">
+    <td height="25">&nbsp;<strong>直接编辑删除</strong></td>
+  </tr>
+  <tr class="bg">
+    <td height="25" align="center">请输入用户名：
+      <INPUT  name=user id="user" size=30>　
+      <input type=submit  value="编辑"> 
+      <input type="submit" onClick="SetAction('del')" value="删除" ></td>
+    </tr>
+</table>
+</form>
+<form action="$basename&" method=post>
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="8">&nbsp;<strong>用户列表</strong></td>
+</tr>
+<tr class=bg>
+  <td width="13%" height=25 align="center">用户名</td>
+  <td width="23%" align="center">昵 称</td>
+  <td width="13%" align="center">等级</td>
+  <td width="11%" align="center">添加歌词数</td>
+  <td width="11%" align="center">推荐歌曲数</td>
+  <td width="17%" align="center">注册日期</td>
+  <td width="5%" align="center">编辑</td>
+  <td width="5%" align="center">删除</td>
+</tr>
+<!--
+EOT;
+get_user_list($page);
+print <<<EOT
+-->
+</table>
+<br />
+<center><input type="button" name="chkall" value="全 选" onClick="CheckAll(this.form)">   <input type=hidden name="action" value=del><input type=submit value="提 交"></center>
+</form>
+<!--
+EOT;
+}elseif($action=='edit'){
+print <<<EOT
+-->
+<form action="$basename&" method=post>
+<table width="98%" align="center" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header">
+    <td height="25" colspan="2">&nbsp;<strong>用户设置</strong></td>
+  </tr>
+  <tr class="bg">
+    <td width="50%">用户名(<font color="blue">如无特殊需要请不要修改</font>)</td>
+    <td><input name="newuser" type="text" id="newuser" value="$username" size="20" /></td>
+  </tr>
+  <tr class="bg">
+    <td>昵 称</td>
+    <td><input name="nicheng" type="text" id="nicheng" value="$usernicheng" size="20" /></td>
+  </tr>
+  <tr class="bg">
+    <td>新密码(<font color="blue">如不更改请留空</font>)</td>
+    <td><input name="pwd" type="text" id="pwd" value='' size="20" /></td>
+  </tr>
+  <tr class="bg">
+    <td width="50%">用户等级</td>
+    <td><select name="lever">
+      $leverselect
+    </select></td>
+  </tr>
+  <tr class="bg">
+    <td>Email</td>
+    <td><input name="useremail" type="text" id="useremail"value='$usermail' size="20" /></td>
+  </tr>
+  <tr class="bg">
+    <td>添加歌词数</td>
+    <td><input name="useraddlrc" type="text" id="useraddlrc" value="$addlrcnum" size="20" /></td>
+  </tr>
+  <tr class="bg">
+    <td>推荐歌曲数</td>
+    <td><input name="usercommend" type="text" id="usercommend" value="$commendsong" size="20" /></td>
+  </tr>
+</table>
+<br />
+<center><input type=submit value="提 交"></center>
+<input type=hidden name='action' value=edit>
+<input type=hidden name='user' value="$username">
+<input type=hidden name=step value=2>
+</form>
+
+<!--
+EOT;
+}
+include_once PrintEot('adminbottom');
+?>
+-->

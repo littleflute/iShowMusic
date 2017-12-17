@@ -1,0 +1,61 @@
+<!--<?php
+include_once PrintEot('top');
+print <<<EOT
+-->
+<div style="text-align:center;margin-bottom:5px;">
+  <h2>小鬼当家音乐系统 iShow Music  </h2>
+</div>
+
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+  <tr class="header">
+    <th colspan="2" align="left"> &nbsp; 常用链接 </th>
+  </tr>
+  <tr class="bg">
+    <td colspan="2">
+	<ul>
+	  <li><a href="admin.php?adminjob=addmusic" target="main">添加音乐</a></li>
+	  <li><a href="admin.php?adminjob=singer" target="main">歌手管理</a><a href="admin.php?adminjob=addmusic" target="main"></a></li>
+	  <li><a href="admin.php?adminjob=reply" target="main">用户评论</a><a href="admin.php?adminjob=addmusic" target="main"></a></li>
+	  <li><a href="admin.php?adminjob=songadmin" target="main">点歌管理</a><a href="admin.php?adminjob=addmusic" target="main"></a></li>
+	  <li><a href="admin.php?adminjob=usercom" target="main">用户推荐音乐</a><a href="admin.php?adminjob=addmusic" target="main"></a></li>	  
+	</ul></td>
+  </tr>
+</table>
+<br />
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <tr class="header"> 
+          <th colspan="2" align="left"> &nbsp; 系统信息</th>
+        </tr>
+        <tr class="bg"> 
+          <td width="50%" height="25">服务器端信息: $sysos</td>
+          <td>PHP程式版本: $sysversion</td>
+        </tr>
+        <tr class="bg"> 
+          <td height="25">Cookie 测试: $ifcookie</td>
+          <td>GD库版本：$gdver</td>
+        </tr>
+        <tr class="bg"> 
+          <td height="25">最大上传限制: $max_upload</td>
+          <td>最大执行时间: $max_ex_time</td>
+        </tr>
+</table>
+<br />
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <tr class="header"> 
+          <th colspan="2" align="left"> &nbsp; iShow Music 信息 </th>
+        </tr>
+        <tr class="bg"> 
+          <td height="25" colspan="2"> 程序版本: <a href="http://www.ishowsky.cn" target="_blank" title="点击查询您目前使用的版本信息"><b>iShow Music</b></a> <span style="color:#FF0000">v$version</span></td>
+        </tr>
+        <tr class="bg">
+          <td width="50%" height="25">官方网站: <a href="http://www.ishowsky.cn" target="_blank">http://www.ishowsky.cn</a></td>
+          <td>作者: Ghost</td>
+        </tr>
+		<script language="JavaScript" src="http://www.ishowsky.cn/GetNewVer.php?v=$version"></script>
+</table>
+<!-- other -->
+<!--
+EOT;
+include_once PrintEot('adminbottom');
+?>
+-->

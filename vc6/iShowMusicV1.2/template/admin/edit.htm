@@ -1,0 +1,165 @@
+<!--<?php
+include_once PrintEot('top');
+if (empty($action)){
+print <<<EOT
+-->
+<script language="JavaScript1.2">
+function SetAction(A){
+    Action.action.value=A;
+	}
+//-->
+</script>
+
+<form action="$basename&" method=post  name=Action  id=Action>
+<input type=hidden name="action" value="edit">
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+  <tr class="header">
+    <td height="25">&nbsp;<strong>直接编辑删除</strong></td>
+  </tr>
+  <tr class="bg">
+    <td height="25" align="center">请输入音乐ID：
+      <INPUT  name=editID id="editID" size=30>　
+      <input type=submit  value="编辑"> 
+      <input type="submit" onClick="SetAction('del')" value="删除" ></td>
+    </tr>
+</table>
+</form>
+<form action="$basename&" method=post>
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="5">&nbsp;<strong>已发布音乐列表</strong></td>
+</tr>
+<tr class=bg>
+  <td width="10%" height=25 align="center">ID</td>
+  <td width="62%" align="center">音 乐 名 称</td>
+  <td width="18%" align="center">发布日期</td>
+  <td width="5%" align="center">编辑</td>
+  <td width="5%" align="center">删除</td>
+</tr>
+<!--
+EOT;
+get_music_list($page);
+print <<<EOT
+-->
+</table>
+<br />
+<center><input type="button" name="chkall" value="全 选" onClick="CheckAll(this.form)">  <input type=hidden name="action" value=del><input type=submit value="提 交"></center>
+</form>
+<!--
+EOT;
+}elseif($action=='edit'){
+print <<<EOT
+-->
+<script language = "JavaScript">
+
+function validate(theform) {
+	if (theform.songname.value=="" ) {
+		alert("请填写音乐名称.");
+		return false; }
+		if (theform.songurl.value=="") {
+		alert("请填写音乐地址.");
+		return false; }
+}
+
+var onecount;
+onecount=0;
+subcat = new Array();
+<!--
+EOT;
+showsinger();
+print <<<EOT
+-->
+function changelocation(locationid)
+    {
+    document.FORM.singerid.length = 0; 
+
+    var locationid=locationid;
+    var i;
+    for (i=0;i < onecount; i++)
+        {
+            if (subcat[i][1] == locationid)
+            { 
+                document.FORM.singerid.options[document.FORM.singerid.length] = new Option(subcat[i][0], subcat[i][2]);
+            } 
+        }
+        
+    }  
+</script>
+<form action="$basename&" method=post name="FORM" enctype="multipart/form-data">
+  <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+    <tr class="header">
+      <td height="25" colspan="2"><strong>修改音乐</strong></td>
+    </tr>
+    <tr class="bg">
+      <td width="20%" height="25" align="right">音乐分类:</td>
+      <td><select name="catid" onchange="changelocation(document.FORM.catid.options[document.FORM.catid.selectedIndex].value)">
+        <option selected="selected" value="">[请选择分类]</option>
+          <!--
+EOT;
+showcat();
+print <<<EOT
+-->
+      </select></td>
+    </tr>
+    <tr class="bg">
+      <td height="25" align="right">演 唱：</td>
+      <td><select name="singerid">
+        <option selected value="$singerid">$singer_name</option>
+      </select></td>
+    </tr>
+    <tr class="bg">
+      <td height="25" align="right">音乐名称：</td>
+      <td><input name="song_name" type="text" id="song_name" value="$songname" size="35" /></td>
+    </tr>
+    <tr class="bg">
+      <td height="25" align="right">音乐地址：</td>
+      <td><input name="song_url" type="text" id="song_url" value="$songurl" size="48" />
+        　 
+        <a href="#" onclick="OpenUp(ifupload)"><strong>从本地上传音乐</strong></a></td>
+    </tr>
+    <tr id="ifupload" style="display:none">
+      <td colspan="2"><iframe frameborder="0" width="100%" height="45" scrolling="No" src="admin/upload.php"></iframe>
+          <script language="JavaScript" type="text/javascript">
+            function OpenUp(Theup)
+            {
+             Theup.style.display	=	"";
+              }
+              //-->
+          </script></td>
+    </tr>
+    <tr class="bg">
+      <td height="25" align="right">是否添加的推荐列表：</td>
+      <td><select name="newcommend" size="1" id="newcommend">
+          <option value="yes" name="newcommend" $show_1commend>是</option>
+          <option value="no" name="newcommend" $show_2commend>否</option>
+        </select>
+    </tr>
+    <tr class="bg">
+      <td height="25" align="right">推荐力度：</td>
+      <td><select name="newhot" size="1" id="ishot">
+          <option value="1" name="newhot" $show_1hot>★</option>
+          <option value="2" name="newhot" $show_2hot>★★</option>
+          <option value="3" name="newhot" $show_3hot>★★★</option>
+          <option value="4" name="newhot" $show_4hot>★★★★</option>
+          <option value="5" name="newhot" $show_5hot>★★★★★</option>
+        </select>
+    </tr>
+	<tr class=bg>
+     <td height=25 align="right">LRC 歌词： </td>
+     <td><input name="fileup" type="file" id="fileup" size="26" />
+    （若不修改此项请不要填）[<a href="http://mp3.baidu.com/m?tn=baidump3lyric&ct=150994944&lm=-1&lf=3&word=$songname" target="_blank">搜索歌词</a>] </td>
+    </tr>
+  </table>
+  <br />
+<center><input type=submit value="提 交"></center>
+<input type=hidden name='action' value=edit>
+<input type=hidden name="editID" value=$editID>
+<input type=hidden name=step value=2>
+</form>
+
+<!--
+EOT;
+}
+include_once PrintEot('adminbottom');
+?>
+-->

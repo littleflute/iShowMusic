@@ -1,0 +1,53 @@
+<!--<?php
+include_once PrintEot('top');
+print <<<EOT
+-->
+<form action="$basename&" method="post" name="form">
+<input type="hidden" name="action" value="demo">
+<table width=60% align=center cellspacing=1 cellpadding=3 class=tableborder>
+<tr class=header><td> JS调用工具</td></tr>
+<tr class="bg"><td>演示代码：<br>
+<input id="code" type="text" name="advert" value="$code1" size="100" onmouseover="form.code.select();"><br>
+<input type="submit" value="查看效果">
+<input type="button" value="复制代码" onclick="CopyCode(document.getElementById('code'));"><br><br>
+<font color="gray">以下为调用效果：</font>
+<hr size=1>$code2
+</td></tr></table></form><br>
+
+<table width=60% align=center cellspacing=1 cellpadding=3 class=tableborder>
+<tr class=header>
+  <td> 音乐调用演示</td>
+</tr>
+<tr class="bg"><td><p><br>
+  可选参数和参数说明：<br>
+  pre : 前缀,可选参数 : 0.&lt;li&gt;，1.◇，2.·，3.○，4.●，5.-，6.□-<br>
+  num : 调用音乐个数<br>
+  length : 音乐标题长度<br>
+  type : 排序方式，可选参数 : new. 最后更新日期 top.排行<br>
+  sort : 音乐大分类ID，格式：1_2_3<br>
+  singer : 歌手ID，格式：1_2_3<br />
+  showsinger : 是否显示歌手，可选参数：0，1<br>
+  hits : 是否显示人气数，可选参数：0，1<br>
+    </p>
+    </td>
+</tr>
+<tr class="bg"><td>演示代码：<br>
+<input type="text" id="code1" value="&lt;script src=&quot;$site_url/js.php?type=top&sort=1&singer=72&hits=1&showsinger=1&pre=0&num=10&length=35&quot;&gt;&lt;/script&gt;" size="100">
+<br>
+<input type="button" value="复制代码" onclick="CopyCode(document.getElementById('code1'));"><br><br>
+<font color="gray">以下为调用效果：</font>
+	<hr size=1>
+<script src="$site_url/js.php?type=top&sort=1&singer=72&hits=1&showsinger=1&pre=0&num=10&length=35"></script>
+</td></tr></table><br>
+
+<script language="JavaScript">
+function CopyCode(obj){ 
+	obj.select(); 
+	var js=obj.createTextRange(); 
+	js.execCommand("Copy");
+}
+</script>
+<!--
+EOT;
+include_once PrintEot('adminbottom');
+?>-->

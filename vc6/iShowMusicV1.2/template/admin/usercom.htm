@@ -1,0 +1,45 @@
+<!--<?php
+include_once PrintEot('top');
+print <<<EOT
+-->
+<form action="$basename&" method=post>
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="8">&nbsp;<strong>用户推荐列表</strong></td>
+</tr>
+<tr class=bg>
+  <td width="10%" height=25 align="center">推荐用户</td>
+  <td width="15%" align="center">音　乐　名</td>
+  <td width="10%" align="center">演　唱</td>
+  <td width="35%" align="center">网络URL地址</td>
+  <td width="15%" align="center">推荐日期</td>
+  <td width="5%" align="center">试听</td>
+  <td width="5%" align="center">通过</td>
+  <td width="5%" align="center">删除</td>
+</tr>
+<!--
+EOT;
+get_com_list($page);
+print <<<EOT
+-->
+</table>
+<br />
+<center><input type="button" name="chkall" value="全 选" onClick="CheckAll(this.form)">   <input type=hidden name="action" value=del><input type=submit value="提 交"></center>
+</form>
+<br />
+<DIV id=player style="DISPLAY: none">
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder id=player style="DISPLAY: block">
+<tr class=header>
+  <td width="100%" height=25>&nbsp;<strong>试听播放器</strong></td>
+</tr>
+<tr class=bg>
+  <td height=25 align="center"><div id="mediaplayer"></div>
+  </td>
+</tr>
+</table>
+</DIV> 
+<!--
+EOT;
+include_once PrintEot('adminbottom');
+?>
+-->

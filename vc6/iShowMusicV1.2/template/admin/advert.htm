@@ -1,0 +1,100 @@
+<!--<?php
+include_once PrintEot('top');
+if(empty($action)){
+print <<<EOT
+-->
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+	<tr class=header><td height=25> 提示信息</td></tr>
+<tr><td bgcolor=#FFFFFF><br><ul>1. 广告支持html代码<br />2. 加入广告后自动生成JS文件<br />3. 在页面需要的位置调用JS即可<br />4. 支持远程调用</ul></td></tr>
+</table><br>
+<table width=98% align=center cellspacing=1 cellpadding=3 class=tableborder>
+<tr>
+	<td height="25" bgcolor="#FFFFFF">
+[<a href="$basename">广告管理</a>]
+[<a href="$basename&action=add">添加广告</a>]
+	</td>
+</tr>
+</table><br>
+<form action="$basename&action=del" method="post">
+<table width=98% border=0 align=center cellpadding=0 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="6">&nbsp;管理网站广告</td>
+</tr>
+<tr align="center">
+<td width="24%" height="25">文件名称</td>
+<td width="41%">广告描述</td>
+<td width="20%">开通时间</td>
+<td width="5%">编辑</td>
+<td width="5%">调用</td>
+<td width="5%">删除</td>
+</tr>
+<!--
+EOT;
+get_adv_list();
+print <<<EOT
+-->
+</table>
+<br><center><input type="button" name="chkall" value="全 选" onClick="CheckAll(this.form)"><input type="submit" name="delete" value="提 交"></center>
+</form>
+<!--
+EOT;
+}elseif($action=='add' || $action=='edit'){
+print <<<EOT
+-->
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25> 提示信息</td>
+</tr>
+<tr>
+  <td bgcolor=#FFFFFF><br><ul>图片广告代码示例:<br><br><input type="text" size="90" value="<a href=连接地址 target=_blank><img src=图片地址 width=宽度 height=高度 border=0></a>"><br><br>Flash广告代码示例:<br><br><textarea cols="90" rows="3"><embed src="文件地址" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="宽度" height="高度"></embed></textarea></ul></td>
+</tr></table><br>
+<form action="$basename&action=$action" method=POST>
+<input type=hidden name="step" value=2>
+<input type=hidden name="ad" value=$ad>
+<input type=hidden name="filename" value="$timestamp.js">
+<input type=hidden name="startdate" value="$timestamp">
+<input type=hidden name="oldname" value="$oldname">
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25 colspan="2"> 更新网站广告</td>
+</tr>
+<tr bgcolor=#FFFFFF><td height=25>广告描述<br>广告信息描述，并不在前台显示</td>
+  <td><input type=text size="40" name="subject" value="$subject"></td></tr>
+<tr bgcolor=#FFFFFF><td height=25>广告代码:<br>请填写广告代码，支持html代码</b></td>
+  <td><textarea name="content" rows=6 cols=50>$content</textarea></td></tr>
+</table>
+<br /><center><input type="submit" value="提 交"></center>
+</form>
+<!--
+EOT;
+}elseif($action=='use'){
+print <<<EOT
+-->
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+<tr class=header>
+  <td height=25> 调用自定义广告</td>
+</tr>
+<tr>
+  <td bgcolor=#FFFFFF><ul><script language=javascript>
+   // 自动 COPY 代码开始
+function MM_findObj(n, d) { //v4.0
+var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+  d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+function JM_cc(ob){
+   var obj=MM_findObj(ob); if (obj) { 
+   obj.select();js=obj.createTextRange();js.execCommand("Copy");}
+   alert("复制成功！将此段代码插入您需要的位置！");
+}
+</script>
+<center><br><textarea name="page_url" rows=3 cols=100 onClick=JM_cc("page_url")>$use</textarea><br><br><input type="submit" onClick=JM_cc("page_url") value="复 制"><br><br><br><a href="#" onclick="history.go(-1)">返 回 上 一 步</a>
+</ul></td>
+</tr></table>
+<!--
+EOT;
+}include_once PrintEot('adminbottom');
+?>
+-->

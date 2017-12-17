@@ -1,0 +1,51 @@
+<!--<?php
+include_once PrintEot('top');
+print <<<EOT
+-->
+
+<table width=98% border=0 align=center cellpadding=3 cellspacing=1 class=tableborder>
+
+<tr class=header>
+  <td height=25><strong>新增管理员</strong></td>
+</tr>
+<tr class=bg>
+<form action="$basename" method="post">
+  <input type=hidden name="action" value="newadmin">
+  <td height=25>管理员用户名：<input type=text name="name" size=20>  密码：<input type=text name="usrpwd" size=20>
+    权限：<select name="usrpower"><option value="2">普通管理员</option><option value="3">超级管理员</option></select>
+    <input type=submit value=" 提 交 "></td>
+  </form>
+  </tr>
+</table>
+<br />
+
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+  <tr class="header">
+    <td height="25"><strong>修改管理员</strong>(密码是MD5加密过的，所以就不显示了，不修改密码，请不要填)</td>
+  </tr>
+<!--
+EOT;
+get_admin();
+print <<<EOT
+-->
+</table>
+<br />
+ <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+   <tr class="header">
+     <td height="25"><strong>注意</strong></td>
+   </tr>
+   <tr class="bg">
+       <td height="25">
+	   <ul>
+	     <li><strong>普通管理员</strong> 只能添加修改删除音乐和用户数据，不能对音乐总分类、歌手、系统设置、斑主管理和限制管理进行操作！</li>
+	     <li><strong>超级管理员</strong> 拥有网站 <strong>所有权限</strong>，请慎重使用！</li>
+	   </ul></td>
+   </tr>
+ </table>
+<br />
+
+<!--
+EOT;
+include_once PrintEot('adminbottom');
+?>
+-->

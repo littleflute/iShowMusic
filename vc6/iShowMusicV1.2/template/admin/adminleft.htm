@@ -1,0 +1,101 @@
+<!--<?php
+include_once PrintEot("head");
+print <<<EOT
+-->
+</head>
+<body>
+<center>
+<div class="tableborder" style="padding:5px"><a href="#" onClick="return ClearAdminDeploy()">+ 全部展开</a> <a href="#" onClick="return SetAdminDeploy()">- 全部收缩</a></div>
+<br>
+<table width="95%" align=center cellspacing=1 cellpadding=3 class="tableborder">
+<tr class="header"><td><a style="float:right" href="#" onClick="return IndexDeploy('a0',1)"><img id="img_a0" src="$skinpath/admin/images/$imgtype[a0].gif"></a><b>iShow</b> <b style="color:#FF9900">Music</b> V $version </td>
+</tr>
+<tbody class=bg id="cate_a0">
+<tr>
+  <td>用户名：<strong>$adminuser</strong></td>
+</tr>
+<tr>
+  <td>级 别：<strong>$lever</strong></td>
+</tr>
+<tr>
+  <td><a target=main href="$admin_file?adminjob=editmypwd">修改我的密码</a></td>
+</tr>
+<tr>
+  <td><a target="_top" href="?adminjob=quit">退出后台</a></td>
+</tr>
+</tbody>
+</table>
+<br>
+<table width="95%" align=center cellspacing=1 cellpadding=3 class="tableborder">
+<tr class="header"><td><a style="float:right" href="#" onClick="return IndexDeploy('a1',1)"><img id="img_a1" src="$skinpath/admin/images/$imgtype[a1].gif"></a>
+<b>常用选项</b></td>
+</tr>
+<tbody class=bg id="cate_a1">
+	<tr>
+		<td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';">
+			<a target=main href="$admin_file?adminjob=addmusic">添加音乐</a>		</td>
+	</tr>
+	<tr>
+		<td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';">
+			<a target=main href="$admin_file?adminjob=edit">修改删除音乐</a>		</td>
+	</tr>
+	<tr>
+		<td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';">
+			<a target=main href="$admin_file?adminjob=songadmin">点歌管理</a>		</td>
+	</tr>
+	<tr>
+	  <td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';"><a target=main href="$admin_file?adminjob=user">会员管理</a></td>
+    </tr>
+	<tr>
+	  <td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';"><a target=main href="$admin_file?adminjob=reply">用户评论管理</a></td>
+    </tr>
+	<tr>
+		<td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';">
+			<a target=main href="$admin_file?adminjob=upadmin">音乐上传管理</a>		</td>
+	</tr>
+</tbody>
+</table>
+<br>
+<!--
+EOT;
+if($right>=3){
+print <<<EOT
+-->
+<table width="95%" align=center cellspacing=1 cellpadding=3 class="tableborder">
+  <tr class="header">
+    <td><a style="float:right" href="#" onClick="return IndexDeploy('a2',1)"><img id="img_a2" src="$skinpath/admin/images/$imgtype[a1].gif"></a><b>超级管理员选项</b></td>
+  </tr>
+  <tbody class=bg id="cate_a2">
+    <tr>
+      <td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';"><a target=main href="$admin_file?adminjob=setting">系统参数设置</a></td>
+    </tr>
+    <tr>
+      <td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';"><a target=main href="$admin_file?adminjob=addadmin">斑主管理</a> </td>
+    </tr>
+    <tr>
+      <td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';"><a target=main href="$admin_file?adminjob=editmypwd"></a> <a target=main href="$admin_file?adminjob=ipban">IP 禁止</a></td>
+    </tr>
+    <tr>
+      <td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';"><a target=main href="$admin_file?adminjob=badwords">不良词语过滤</a></td>
+    </tr>
+	<tr>
+		<td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';">
+			<a target=main href="$admin_file?adminjob=advert">自定义JS广告</a>		</td>
+	</tr>
+	<tr>
+		<td onMouseOver="this.className='tableborder';" onMouseOut="this.className='bg';">
+			<a target=main href="$admin_file?adminjob=jsadmin">首页调用管理</a>		</td>
+	</tr>
+  </tbody>
+</table>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+<br>
+$leftinfo
+<center><a href="http://www.ishowsky.cn" target="_blank"><b style="color:#000000">iShowSky</b><b style="color:#FF9900">.CN</b></a></center><br></center>
+<!--
+EOT;
+?>-->

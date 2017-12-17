@@ -1,0 +1,28 @@
+<!--<?php
+include_once PrintEot("head");
+print <<<EOT
+-->
+<script>
+ifcheck = true;
+function CheckAll(form)
+{
+	for (var i=0;i<form.elements.length-2;i++)
+	{
+		var e = form.elements[i];
+		e.checked = ifcheck;
+	}
+	ifcheck = ifcheck == true ? false : true;
+}
+</script>
+</head>
+<body>
+<table width="100%" height="30" border=0 align=center cellpadding=4 cellspacing=2>
+	<tr class=header align=center>
+		<td width='30%'><a href="$admin_file?adminjob=admin">管理区首页</a></td>
+		<td width='30%'><a href='http://www.ishowsky.cn/bbs/' target='_blank'>iShowMusic 用户交流</a></td>
+		<td width='30%'><a href='$site_url' target='_blank'>我的音乐首页</a></td>
+	</tr>
+</table><br>
+<!--
+EOT;
+?>
