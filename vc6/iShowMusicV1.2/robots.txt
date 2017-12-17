@@ -1,0 +1,10 @@
+#
+# robots.txt for iShowMusic
+# Version 1.2
+#
+
+User-agent: *
+Disallow: /admin/
+Disallow: /inc/
+Disallow: /template/
+Disallow: /player/

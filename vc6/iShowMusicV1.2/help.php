@@ -1,0 +1,8 @@
+<?php
+require("global.php");
+$subtitle='ÓÃ»§°ïÖú';
+require("header.php");
+
+include_once PrintEot('help');
+footer();
+?>
