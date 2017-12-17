@@ -1,0 +1,269 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 120%; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, "宋体"; BACKGROUND-COLOR: #f7faf1; TEXT-ALIGN: center
+}
+DIV {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px auto; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+FORM {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+IMG {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+UL {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+OL {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+LI {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+DL {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+DT {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+DD {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+H1 {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+H2 {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+H3 {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+H4 {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+H5 {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+H6 {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; LIST-STYLE-TYPE: none
+}
+TD {
+	FONT-SIZE: 12px; LINE-HEIGHT: 18px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.font12-gray {
+	COLOR: #8c8c8c
+}
+.font12-purple {
+	COLOR: #9698aa
+}
+.font12-white {
+	COLOR: #ffffff
+}
+.font14-red {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ff3300
+}
+.efont10-purple {
+	FONT-SIZE: 10px; COLOR: #77798e; FONT-FAMILY: Arial
+}
+A:link {
+	COLOR: #9698aa; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #9698aa; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #00faff; TEXT-DECORATION: none
+}
+.textarea {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 8px; BORDER-TOP: medium none; PADDING-LEFT: 8px; PADDING-BOTTOM: 4px; BORDER-LEFT: medium none; WIDTH: 225px; PADDING-TOP: 4px; BORDER-BOTTOM: medium none; HEIGHT: 215px
+}
+TEXTAREA {
+	FONT-SIZE: 12px; COLOR: #9698aa; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #35374c
+}
+.table-boxbg {
+	CLEAR: both; BACKGROUND: url(send_bg.jpg) no-repeat left top; WIDTH: 620px
+}
+.topLogo {
+	FLOAT: left; WIDTH: 183px; HEIGHT: 74px
+}
+.topMenu {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; WIDTH: 437px; PADDING-TOP: 45px; HEIGHT: 74px
+}
+.sendTag {
+	CLEAR: both
+}
+.TagHeight {
+	OVERFLOW: hidden; HEIGHT: 32px
+}
+.sendTag .menu {
+	CLEAR: both; OVERFLOW: hidden; HEIGHT: 32px
+}
+.sendTag .menu UL {
+	
+}
+.sendTag .menu LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 84px; CURSOR: pointer; PADDING-TOP: 15px; LIST-STYLE-TYPE: none
+}
+.sendTag .menu .active {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(menubg_green_on.gif) no-repeat left top; COLOR: #333333; TEXT-DECORATION: none
+}
+.sendTag .menu .normal {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: url(menubg_green_off.gif) no-repeat left top; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.sendTag .menu .over {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(menubg_green_on.gif) no-repeat left top; COLOR: #333333; TEXT-DECORATION: none
+}
+.mainBg-green {
+	CLEAR: both; BACKGROUND: url(send_bg_green.jpg) repeat-y left top; WIDTH: 620px; HEIGHT: 196px
+}
+.box-green {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(send_box_green.jpg) no-repeat left top; PADDING-BOTTOM: 0px; PADDING-TOP: 50px; HEIGHT: 178px
+}
+.boxButtom-green {
+	CLEAR: both; BACKGROUND: url(send_buttom_green.jpg) no-repeat left top; WIDTH: 620px; HEIGHT: 14px
+}
+.mainBg-orange {
+	CLEAR: both; BACKGROUND: url(send_bg_orange.jpg) repeat-y left top; WIDTH: 620px; HEIGHT: 196px
+}
+.box-orange {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(send_box_orange.jpg) no-repeat left top; PADDING-BOTTOM: 0px; PADDING-TOP: 50px; HEIGHT: 178px
+}
+.boxButtom-orange {
+	CLEAR: both; BACKGROUND: url(send_buttom_orange.jpg) no-repeat left top; WIDTH: 620px; HEIGHT: 18px
+}
+.mainBg-pink {
+	CLEAR: both; BACKGROUND: url(send_bg_pink.jpg) repeat-y left top; WIDTH: 620px
+}
+.box-pink {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(send_box_pink.jpg) no-repeat left top; PADDING-BOTTOM: 0px; PADDING-TOP: 25px
+}
+.boxButtom-pink {
+	CLEAR: both; BACKGROUND: url(send_buttom_pink.jpg) no-repeat left top; WIDTH: 620px; HEIGHT: 18px
+}
+.mainBg-blue {
+	CLEAR: both; BACKGROUND: url(send_bg_blue.jpg) repeat-y left top; WIDTH: 620px; HEIGHT: 196px
+}
+.box-blue {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(send_box_blue.jpg) no-repeat left top; PADDING-BOTTOM: 0px; PADDING-TOP: 50px; HEIGHT: 178px
+}
+.boxButtom-blue {
+	CLEAR: both; BACKGROUND: url(send_buttom_blue.jpg) no-repeat left top; WIDTH: 620px; HEIGHT: 18px
+}
+.playerBg {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 2px; BACKGROUND: url(send_bg_player.jpg) no-repeat left top; PADDING-BOTTOM: 0px; WIDTH: 620px; PADDING-TOP: 23px; HEIGHT: 84px
+}
+.sound-linebg {
+	BACKGROUND-POSITION: center center; BACKGROUND-IMAGE: url(sound_linbg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.contentBg {
+	CLEAR: both; BACKGROUND: url(send_bg_content.jpg) repeat-y left top; WIDTH: 620px
+}
+.cboxBg {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 1px; BACKGROUND: url(send_bg_cbox.jpg) no-repeat left top; PADDING-BOTTOM: 0px; WIDTH: 620px; PADDING-TOP: 0px
+}
+.playChoice {
+	BACKGROUND: url(play_bg_choice.gif) no-repeat left top; WIDTH: 340px; HEIGHT: 21px
+}
+.listTitle {
+	BACKGROUND: url(list_bg_title.gif) no-repeat left top
+}
+.listContent-bg {
+	BACKGROUND: url(list_bg_content.gif) repeat-y left top
+}
+.listBox {
+	BACKGROUND: url(list_box_bg.gif) repeat-y left top
+}
+.line-black {
+	BORDER-RIGHT: #000000 1px solid
+}
+.AdTitle {
+	PADDING-LEFT: 40px; FONT-WEIGHT: bold; BACKGROUND: url(lyric_bg_title.gif) no-repeat left top; PADDING-BOTTOM: 6px; COLOR: #cbcbcb
+}
+.AdBox {
+	BACKGROUND: url(lyric_box_bg.gif) repeat-y left top
+}
+.AdBg-content {
+	BACKGROUND: url(lyric_bg_content.gif) repeat-x left top
+}
+.adBg {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(send_bg_content.jpg) repeat-y left top; PADDING-BOTTOM: 8px; WIDTH: 620px; PADDING-TOP: 8px; HEIGHT: 140px
+}
+.boxButtom {
+	CLEAR: both;
+	BACKGROUND: url(send_bg_buttom.gif) no-repeat left top;
+	WIDTH: 620px;
+	HEIGHT: 22px;
+	line-height: 22px;
+	font-size: 12px;
+	color: #8c8c8c;
+}
+#pageinfo {
+	FONT-SIZE: 12px;
+	COLOR: #9698aa;
+	FONT-FAMILY: Verdana, Arial, "宋体";
+	text-align: center;
+	width:340px
+}
+#scroller {
+	FONT-SIZE: 12px; COLOR: #9698aa; FONT-FAMILY: Verdana, Arial, "宋体"
+}
+#scroller TD {
+	FONT-SIZE: 12px; COLOR: #9698aa; FONT-FAMILY: Verdana, Arial, "宋体"
+}
+
+@media All    
+{
+#scroller {
+	FONT-SIZE: 12px
+}
+#scroller TD {
+	FONT-SIZE: 12px
+}
+    }
+#scroller .ownerName {
+	COLOR: #666666
+}
+#scroller .postNumber {
+	COLOR: #9a9a9a
+}
+#scroller .postDate {
+	COLOR: #c4c4c4
+}
+#scroller {
+	OVERFLOW: hidden; WIDTH: 340px; CLIP: rect(0px 340px 202px 0px); HEIGHT: 202px
+}
+#scroller #container {
+	OVERFLOW: hidden; WIDTH: 320px; CLIP: rect(0px 320px 192px 0px); POSITION: absolute; TOP: 5px; HEIGHT: 192px
+}
+#scroller #content {
+	WIDTH: 320px; POSITION: absolute
+}
+#scroller #scrollUp {
+	LEFT: 325px; POSITION: absolute; TOP: 3px
+}
+#scroller #scrollDn {
+	LEFT: 325px; POSITION: absolute; TOP: 194px
+}
+#scroller #scrollbar {
+	LEFT: 325px; WIDTH: 11px; CLIP: rect(0px 10px 194px 0px); POSITION: absolute; TOP: 14px; HEIGHT: 202px
+}
+#scroller #thumb {
+	LEFT: 0px; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #cccccc; layer-background-color: #CCCCCC
+}
+#scroller #thumbArrowUp {
+	LEFT: 2px; VISIBILITY: hidden; POSITION: absolute
+}
+#scroller #thumbArrowDn {
+	LEFT: 2px; VISIBILITY: hidden; POSITION: absolute
+}
+#scroller #marker {
+	LEFT: 1px; VISIBILITY: hidden; WIDTH: 8px; CLIP: rect(0px 10px 1px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 1px; BACKGROUND-COLOR: #cccccc; layer-background-color: #CCCCCC
+}
+#scroller #scrollerMo5Shim {
+	LEFT: 0px; WIDTH: 1px; POSITION: absolute; TOP: 5px; HEIGHT: 1px
+}
+#scroller #elevUp {
+	LEFT: 0px; OVERFLOW: hidden; WIDTH: 10px; CLIP: rect(0px 10px 202px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 202px
+}
+#scroller #elevDn {
+	LEFT: 0px; OVERFLOW: hidden; WIDTH: 10px; CLIP: rect(0px 10px 202px 0px); POSITION: absolute; TOP: 0px; HEIGHT: 202px
+}
